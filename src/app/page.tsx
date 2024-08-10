@@ -8,6 +8,10 @@ import { FaCheck } from "react-icons/fa6";
 import { CardBody } from "@/animations/3d-card";
 import { CardItem } from "@/animations/3d-card";
 import { clients, products } from "@/lib/constants";
+import FooterLeftAside from "@/components/FooterComponent/FooterLeftAside";
+import ContactForm from "@/components/ContactComponent/ContactForm";
+import { MacbookScroll } from "@/animations/macbook-scroll";
+import PrimarySiteFooter from "./Globals/GlobalSiteFooter/FooterAttributesWrapping/Components/PrimarySiteFooter";
 
 
 export default function Home() {
@@ -184,7 +188,11 @@ export default function Home() {
             </CardBody>
           </CardContainer>
         </div>
+        {/* <MacbookScroll/> */}
       </section>
+      {/* <ContactForm/> */}
+     <PrimarySiteFooter/>
+      
     </main>
   );
 }
