@@ -12,12 +12,14 @@ import FooterLeftAside from "@/components/FooterComponent/FooterLeftAside";
 import ContactForm from "@/components/ContactComponent/ContactForm";
 import { MacbookScroll } from "@/animations/macbook-scroll";
 import PrimarySiteFooter from "./Globals/GlobalSiteFooter/FooterAttributesWrapping/Components/PrimarySiteFooter";
+import PrimaryNavigation from "./Globals/GlobalSiteNavigation/NavigationWrapping/PrimaryNavigation";
 
 
 export default function Home() {
   return (
     <main className="relative">
-      <NavbarWrappedModal />
+      {/* <NavbarWrappedModal /> */}
+      <PrimaryNavigation/>
       <section className="w-full bg-neutral-100 rounded-md relative flex flex-col items-center antialiased overflow-hidden">
         <div className="absolute inset-0  w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_35%,#223_100%)]"></div>
         <div className="flex flex-col mt-[-100px] md:mt-[-50px]">
