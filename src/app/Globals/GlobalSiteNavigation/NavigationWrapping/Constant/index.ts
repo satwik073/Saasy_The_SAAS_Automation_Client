@@ -47,6 +47,7 @@ export const translating_navigattion_text = {
     drop_down_dark_content : "Dark",
     drop_down_light_content : "Light",
     drop_down_light_connecting_content : "light",
+    drop_down_dark_connecting_content : "dark",
     drop_down_system_content : "System",
     web_page_current_light_theme_color : "white",
     web_page_current_dark_theme_color : "black",
