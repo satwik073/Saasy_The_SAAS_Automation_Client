@@ -10,7 +10,6 @@ import { clients, products } from "@/lib/constants";
 import PrimarySiteFooter from "./Globals/GlobalSiteFooter/FooterAttributesWrapping/Components/PrimarySiteFooter";
 import PrimaryNavigation from "./Globals/GlobalSiteNavigation/NavigationWrapping/PrimaryNavigation";
 import { SpotlightPreview } from "./Pages/SpotLightCombined/SpotLightModuler";
-import { StickyScrollRevealDemo } from "./Scroll";
 
 
 export default function Home() {

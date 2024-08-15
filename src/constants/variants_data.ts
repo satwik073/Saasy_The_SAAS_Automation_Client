@@ -2,7 +2,7 @@
 
 import { TypographyVariants , BoxVariants } from "./typography_and_box_variant";
 
-const typography_variants_seperated: TypographyVariants = {
+export const typography_variants_seperated: TypographyVariants = {
   headings_variant: {
     h1: 'h1',
     h2: 'h2',
@@ -21,8 +21,7 @@ const typography_variants_seperated: TypographyVariants = {
     inherit: 'inherit',
   },
 };
-
-const box_component_seperated: BoxVariants = {
+export const box_component_seperated: BoxVariants = {
   components_fetched: {
     default: 'div',
     header: 'header',
@@ -63,7 +62,6 @@ const box_component_seperated: BoxVariants = {
     summary: 'summary',
     dialog: 'dialog',
     output: 'output',
+    outline: 'outline', // Add this line
   },
 };
-
-export { typography_variants_seperated, box_component_seperated };

@@ -24,7 +24,7 @@ export const InfiniteMovingCards = ({
   const matches = useMediaQuery('(max-width:600px)');
   useEffect(() => {
     addAnimation()
-  }, [])
+  }, [addAnimation])
   
   const [start, setStart] = useState(false)
   function addAnimation() {

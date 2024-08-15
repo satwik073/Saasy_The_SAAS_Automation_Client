@@ -1,17 +1,35 @@
-import React from 'react'
+import Image from 'next/image';
 
 type ImageContainerProps = {
-    width : string | number,
-    height : string | number,
-    src : string,
-    className? : string,
-    alt : string
-}
+  width: number;  
+  height: number;
+  src: string;
+  alt: string;
+  className?: string;
+  layout?: 'fixed' | 'intrinsic' | 'responsive' | 'fill';
+  priority?: boolean;
+};
 
-const ImageContainer: React.FC<ImageContainerProps> = ({width , height , src , alt , className}) => {
+const ImageContainer: React.FC<ImageContainerProps> = ({
+  width,
+  height,
+  src,
+  alt,
+  className,
+  layout = 'intrinsic', 
+  priority = false,
+}) => {
   return (
-    <img src={src} width={width} height={height} alt={alt} />
-  )
+    <Image
+      src={src}
+      width={layout === 'fill' ? undefined : width} 
+      height={layout === 'fill' ? undefined : height}
+      alt={alt}
+      className={className}
+      layout={layout}
+      priority={priority}
+    />
+  );
 }
 
-export default ImageContainer
+export default ImageContainer;
