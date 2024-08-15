@@ -3,7 +3,7 @@
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
-
+import useMediaQuery from '@mui/material/useMediaQuery';
 export const InfiniteMovingCards = ({
   items,
   direction = 'left',
@@ -21,7 +21,7 @@ export const InfiniteMovingCards = ({
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null)
   const scrollerRef = React.useRef<HTMLUListElement>(null)
-
+  const matches = useMediaQuery('(max-width:600px)');
   useEffect(() => {
     addAnimation()
   }, [])
@@ -74,7 +74,7 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        'scroller relative z-20  max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
+        'scroller relative z-20  w-full overflow-hidden md:mt-0 mt-20 bg-slate-900 dark:bg-black',
         className
       )}
     >
@@ -88,11 +88,11 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <Image
-            width={170}
+            width={90}
             height={1}
             src={item.href}
             alt={item.href}
-            className=" relative rounded-2xl  object-contain opacity-50"
+            className=" relative rounded-2xl  text-black object-contain opacity-50"
             key={item.href}
           />
         ))}

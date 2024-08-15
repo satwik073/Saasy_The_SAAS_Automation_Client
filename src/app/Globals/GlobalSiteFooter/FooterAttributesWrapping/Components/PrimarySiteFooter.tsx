@@ -1,10 +1,11 @@
 import React from 'react';
-import NavbarLeftAside from '@/components/Global/Navbar/NavbarContainers/NavbarLeftAside';
+
 import Box from '@mui/material/Box';
 import { translating_footer_text } from '../Constant'
 import { Divider, Grid, List, ListItem, Typography } from '@mui/material';
 import Link from 'next/link';
-import { footer_styling_attached } from '../Constant/layouts';
+import { footer_styling_attached } from '../Constant/layouts_controlling';
+import SaaSyAutomaiton from '@/app/Globals/GlobalSiteNavigation/NavigationWrapping/SaaSyAutoSeperated/SaaSyAutomaiton';
 const PrimarySiteFooter = () => {
     return (
         <Box component="footer" className="mt-[100px] w-full bg-gray-50 dark:bg-black">
@@ -12,7 +13,7 @@ const PrimarySiteFooter = () => {
                 <Grid item lg={12} container className={footer_styling_attached.grid_containers}>
                     <Grid item lg={5} className="w-full lg:w-1/3 ">
                         <Box className="w-full">
-                            <translating_footer_text.footer_logo_component />
+                           <SaaSyAutomaiton/>
                             <Typography className={footer_styling_attached.footer_headlines_bolded}>
                                 {translating_footer_text.footer_headlines}
                             </Typography>
@@ -37,6 +38,9 @@ const PrimarySiteFooter = () => {
                         ))}
                     </Grid>
                 </Grid>
+            <div className='w-full justify-center items-center '>
+                    <h1 className="text-center text-5xl md:text-9xl lg:text-[18rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 dark:from-neutral-950 to-neutral-200 dark:to-neutral-800 inset-x-0">SAASY</h1>
+            </div>
             </Grid>
             <Divider className={footer_styling_attached.divider_remastered} />
             <Box className={footer_styling_attached.box_stylings_defined}>
@@ -45,7 +49,7 @@ const PrimarySiteFooter = () => {
                         &copy; {translating_footer_text.footer_copyright_issue_marked}
                     </Typography>
                 </Box>
-                <Box className="flex justify-center gap-4 mt-4">
+                <Box className="flex justify-center items-center gap-4">
                     {translating_footer_text.social_media_connections.map((links_data_fetched, indexed_value: React.Key | null | undefined) => (
                         <Link
                             key={indexed_value}

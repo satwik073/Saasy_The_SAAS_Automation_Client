@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
+'use client'
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/multiple-themes-provider";
-import { title } from "process";
+import { translating_navigattion_text } from "./Globals/GlobalSiteNavigation/NavigationWrapping/Constant";
 const DM_Sans_desructured = DM_Sans({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -17,7 +17,7 @@ export default function RootLayout({
       <body className={DM_Sans_desructured.className}>
           <ThemeProvider
             attribute="class"
-            defaultTheme="dark"
+            defaultTheme={translating_navigattion_text.drop_down_dark_content}
             enableSystem
             disableTransitionOnChange
           >

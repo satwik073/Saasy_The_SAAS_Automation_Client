@@ -1,8 +1,7 @@
-import NavbarLeftAside from "@/components/Global/Navbar/NavbarContainers/NavbarLeftAside";
+
 import { FaDribbble, FaFacebook, FaGithub, FaInstagram, FaTwitter } from 'react-icons/fa'; // Correct import path
 
 export const translating_footer_text = {
-    footer_logo_component: NavbarLeftAside,
     footer_headlines: " Revolutionize your business with seamless automation and cutting-edge technology, empowering you to focus on growth and innovation while we handle the complexities of your digital operations",
     footer_copyright_issue_marked: "2024 SaaSy. All rights reserved.",
     footer_fetched_headings_attached_links: [
