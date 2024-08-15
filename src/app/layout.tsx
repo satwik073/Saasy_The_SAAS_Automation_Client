@@ -17,7 +17,7 @@ export default function RootLayout({
       <body className={DM_Sans_desructured.className}>
           <ThemeProvider
             attribute="class"
-            defaultTheme={translating_navigattion_text.drop_down_dark_content}
+            defaultTheme={translating_navigattion_text.drop_down_dark_connecting_content}
             enableSystem
             disableTransitionOnChange
           >
