@@ -16,25 +16,25 @@ const World = dynamic(() => import("../Components/ui/globe_collector").then((m) 
       pointSize: 4,
       globeColor: "#000000",  // Bright black globe color (very dark gray)
       showAtmosphere: true,
-      atmosphereColor: "#FFFFFF",  // White atmosphere color
-      atmosphereAltitude: 0.2,
+      atmosphereColor: "#10B981",  // White atmosphere color
+      atmosphereAltitude: 0.3,
       emissive: "#000000",  // Emissive color set to white
-      emissiveIntensity: 1,
-      shininess: 67,
-      polygonColor: "rgba(255,255,255,1)",  // Polygon color set to white
-      ambientLight: "#FFFFFF",  // Ambient light set to white
+      emissiveIntensity: 11,
+      shininess: 1,
+      polygonColor: "rgba(255,255,255,3)",  // Polygon color set to white
+      ambientLight: "#10B981",  // Ambient light set to white
       directionalLeftLight: "#ffffff",  // Directional light set to white
       directionalTopLight: "#ffffff",  // Directional light set to white
       pointLight: "#ffffff",  // Point light set to white
       arcTime: 1000,
-      arcLength: 0.9,
-      rings: 1,
+      arcLength: 2,
+      rings: 2,
       maxRings: 8,
       initialPosition: { lat: 22.3193, lng: 114.1694 },
       autoRotate: true,
-      autoRotateSpeed: 0.5,
+      autoRotateSpeed: 1,
     };
-    const colors = ["#FFFFFF"]; // Grayscale colors
+    const colors = ["#10B981"]; // Grayscale colors
   const sampleArcs = [
     {
       order: 1,
