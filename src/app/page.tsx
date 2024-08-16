@@ -10,6 +10,7 @@ import { clients, products } from "@/lib/constants";
 import PrimarySiteFooter from "./Globals/GlobalSiteFooter/FooterAttributesWrapping/Components/PrimarySiteFooter";
 import PrimaryNavigation from "./Globals/GlobalSiteNavigation/NavigationWrapping/PrimaryNavigation";
 import { SpotlightPreview } from "./Pages/SpotLightCombined/SpotLightModuler";
+import GridConstants from "./Pages/GridContainer/GridConstants";
 
 
 export default function Home() {
@@ -27,13 +28,12 @@ export default function Home() {
         speed="slow"
       />
       {/* <StickyScrollRevealDemo/> */}
-      <section>
-        <Parallax products={products}></Parallax>
-        {/* <MacbookScroll/> */}
-      </section>
-      <section className="mt-[-500px]">
-        <LampContained/>
-        <div className="flex flex-wrap items-center justify-center flex-col md:flex-row gap-8 -mt-72">
+     <section>
+      <GridConstants/>
+     </section>
+      <section className="">
+        {/* <LampContained/> */}
+        {/* <div className="flex flex-wrap items-center justify-center flex-col md:flex-row gap-8 -mt-72">
         <CardContainer className="inter-var md:m-0 m-7 mt-0">
             <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-neutral-500/[0.1] dark:bg-black hover:border-emerald-500 border-black/[0.1] w-full md:!w-[350px] h-auto rounded-xl p-6 border">
               <CardItem
@@ -176,7 +176,7 @@ export default function Home() {
               </div>
             </CardBody>
           </CardContainer>
-        </div>
+        </div> */}
         {/* <MacbookScroll/> */}
       </section>
       {/* <ContactForm/> */}

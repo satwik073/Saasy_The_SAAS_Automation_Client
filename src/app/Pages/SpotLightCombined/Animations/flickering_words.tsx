@@ -4,7 +4,7 @@ import { clients, products } from "@/lib/constants";
 
 
 export function FlipWordsDemo() {
-  const words = ["efficient", "seamless", "powerful", "intuitive", "reliable"]
+  const words = ["efficient", "powerful", "intuitive", "reliable"]
 
 
   return (
