@@ -26,8 +26,8 @@ export function AuroraBackgroundDemo() {
       >
          <Typography variant={typography_variants_seperated.headings_variant.h1} className="text-4xl md:text-7xl text-left font-extrabold mb-3 relative  dark:text-white text-black max-w-4xl">{AURA_SIMULATION_TEXT.SECTIONS.heading_intro}
         </Typography>
-        <Typography className={`relative text-sm sm:text-xl text-zinc-500 dark:text-zinc-300 text-center tracking-wide mb-8  antialiased leading-loose`}>{AURA_SIMULATION_TEXT.SECTIONS.welcome_text_subtitle}</Typography>
-        <Button className={`bg-slate-900 dark:bg-white dark:text-black no-underline flex space-x-2 group cursor-pointer relative  shadow-zinc-900 p-px font-semibold capitalize text-white px-4 py-2 w-full sm:w-52 h-14 rounded-2xl text-sm text-center items-center justify-center` } > {browse_components_fetched}</Button>
+        <Typography className={`relative text-sm sm:text-xl max-w-xl text-zinc-500 dark:text-zinc-300 text-center tracking-wide mb-8  antialiased leading-loose`}>{AURA_SIMULATION_TEXT.SECTIONS.welcome_text_subtitle}</Typography>
+        <Button className={`bg-slate-900 dark:bg-white  dark:text-black no-underline flex space-x-2 group cursor-pointer relative  shadow-zinc-900 p-px font-semibold capitalize text-white px-4 py-2 w-full sm:w-52 h-14 rounded-2xl text-sm text-center items-center justify-center` } > {browse_components_fetched}</Button>
       </motion.div>
     </AuroraBackground>
   );
