@@ -11,7 +11,7 @@ import PrimarySiteFooter from "../Globals/GlobalSiteFooter/FooterAttributesWrapp
 import PrimaryNavigation from "../Globals/GlobalSiteNavigation/NavigationWrapping/PrimaryNavigation";
 import { SpotlightPreview } from "../Pages/SpotLightCombined/SpotLightModuler";
 import { BentoGridThirdDemo } from "../Pages/GridContainer/GridConstants";
-import { BentoGridDemo } from "@/Pages/GridContainer/GridTerminalLayout";
+
 
 
 export default function Home() {
@@ -31,7 +31,6 @@ export default function Home() {
       {/* <StickyScrollRevealDemo/> */}
      <section>
       <BentoGridThirdDemo/>
-      <BentoGridDemo/>
      </section>
 
    
