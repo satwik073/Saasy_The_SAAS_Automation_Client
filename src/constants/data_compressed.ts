@@ -7,5 +7,6 @@ export const displaying_buttons : ButtonsFetching={
     products_items : "Products",
     browse_components :"Browse Components",
     custom_components :"Custom Components",
+    debugging_concept : "Join Now"
 
 }
