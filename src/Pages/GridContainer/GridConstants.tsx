@@ -16,7 +16,7 @@ import { Box, Grid, Typography } from "@mui/material";
 import { GRID_CONSTANTS } from "./Constants";
 import { GRID_TRANSFORM } from "./Constants/layout_controlling";
 import { GlobeDemo } from "./Animations/globe_fetched";
-import { MacbookScroll } from "@/Animations/macbook-scroll";
+import { MacbookScroll } from "@/animations/macbook-scroll";
 import Switcher5 from "./Components/GridContent/TogglingSwitches";
 
 const customTexts = [

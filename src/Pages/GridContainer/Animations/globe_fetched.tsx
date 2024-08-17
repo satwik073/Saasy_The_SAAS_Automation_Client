@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
-import { InfiniteMovingCards } from "@/Animations/infinite-moving-cards";
+import { InfiniteMovingCards } from "@/animations/infinite-moving-cards";
 import { clients } from "@/lib/constants";
 
 const World = dynamic(() => import("../Components/ui/globe_collector").then((m) => m.World), {
