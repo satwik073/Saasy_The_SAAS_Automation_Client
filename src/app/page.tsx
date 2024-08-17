@@ -1,16 +1,17 @@
-import { CardContainer } from "@/animations/3d-card";
-import { Parallax } from "@/animations/connect-parallax";
-import { ContainerScroll } from "@/animations/controller-scroll-animations";
-import { InfiniteMovingCards } from "@/animations/infinite-moving-cards";
-import { LampContained } from "@/animations/lamp-controlling";
+import { CardContainer } from "@/Animations/3d-card";
+import { Parallax } from "@/Animations/connect-parallax";
+import { ContainerScroll } from "@/Animations/controller-scroll-animations";
+import { InfiniteMovingCards } from "@/Animations/infinite-moving-cards";
+import { LampContained } from "@/Animations/lamp-controlling";
 import { FaCheck } from "react-icons/fa6";
-import { CardBody } from "@/animations/3d-card";
-import { CardItem } from "@/animations/3d-card";
+import { CardBody } from "@/Animations/3d-card";
+import { CardItem } from "@/Animations/3d-card";
 import { clients, products } from "@/lib/constants";
-import PrimarySiteFooter from "./Globals/GlobalSiteFooter/FooterAttributesWrapping/Components/PrimarySiteFooter";
-import PrimaryNavigation from "./Globals/GlobalSiteNavigation/NavigationWrapping/PrimaryNavigation";
-import { SpotlightPreview } from "./Pages/SpotLightCombined/SpotLightModuler";
-import { BentoGridThirdDemo } from "./Pages/GridContainer/GridConstants";
+import PrimarySiteFooter from "../Globals/GlobalSiteFooter/FooterAttributesWrapping/Components/PrimarySiteFooter";
+import PrimaryNavigation from "../Globals/GlobalSiteNavigation/NavigationWrapping/PrimaryNavigation";
+import { SpotlightPreview } from "../Pages/SpotLightCombined/SpotLightModuler";
+import { BentoGridThirdDemo } from "../Pages/GridContainer/GridConstants";
+import { BentoGridDemo } from "@/Pages/GridContainer/GridTerminalLayout";
 
 
 export default function Home() {
@@ -30,7 +31,10 @@ export default function Home() {
       {/* <StickyScrollRevealDemo/> */}
      <section>
       <BentoGridThirdDemo/>
+      <BentoGridDemo/>
      </section>
+
+   
       <section className="">
         {/* <LampContained/> */}
         {/* <div className="flex flex-wrap items-center justify-center flex-col md:flex-row gap-8 -mt-72">

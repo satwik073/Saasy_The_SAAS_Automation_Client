@@ -5,7 +5,7 @@ import { translating_footer_text } from '../Constant'
 import { Divider, Grid, List, ListItem, Typography } from '@mui/material';
 import Link from 'next/link';
 import { footer_styling_attached } from '../Constant/layouts_controlling';
-import SaaSyAutomaiton from '@/app/Globals/GlobalSiteNavigation/NavigationWrapping/SaaSyAutoSeperated/SaaSyAutomaiton';
+import SaaSyAutomaiton from '@/Globals/GlobalSiteNavigation/NavigationWrapping/SaaSyAutoSeperated/SaaSyAutomaiton';
 const PrimarySiteFooter = () => {
     return (
         <Box component="footer" className="mt-[100px] w-full bg-gray-50 dark:bg-black">

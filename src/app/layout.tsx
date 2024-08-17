@@ -2,7 +2,7 @@
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/multiple-themes-provider";
-import { translating_navigattion_text } from "./Globals/GlobalSiteNavigation/NavigationWrapping/Constant";
+import { translating_navigattion_text } from "../Globals/GlobalSiteNavigation/NavigationWrapping/Constant";
 const DM_Sans_desructured = DM_Sans({ subsets: ["latin"] });
 
 export default function RootLayout({

@@ -10,7 +10,7 @@ import { spot_light_preview_content_raised } from "./Constant";
 import { spotlight_custom_stylings_attached } from "./Constant/layout_controlling";
 import { Box, Grid, Typography } from "@mui/material";
 import { box_component_seperated, typography_variants_seperated } from "@/constants/variants_data";
-import { translating_navigattion_text } from "@/app/Globals/GlobalSiteNavigation/NavigationWrapping/Constant";
+import { translating_navigattion_text } from "@/Globals/GlobalSiteNavigation/NavigationWrapping/Constant";
 
 export function SpotlightPreview() {
   const browse_components_fetched = displaying_buttons['browse_components'];
