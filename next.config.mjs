@@ -2,8 +2,8 @@
 const nextConfig = {
     reactStrictMode:true,
     images: {
-        domains: ['//assets.aceternity.com/manu.png'],
-      },
+      domains: ['images.unsplash.com', 'assets.aceternity.com'],
+    },
 };
 
 export default nextConfig;

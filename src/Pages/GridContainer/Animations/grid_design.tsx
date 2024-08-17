@@ -42,7 +42,7 @@ export const BentoGridItem = ({
         >
             <div className="group-hover/bento:translate-x-2 transition duration-200">
          
-                <div className="max-w-5xl mx-auto tracking-tight font-medium text-black dark:text-white text-xl md:text-2xl md:leading-snug text-left">
+                <div className=" tracking-tight font-medium text-black dark:text-white text-xl md:text-2xl md:leading-snug text-left">
 
                     <span className={GRID_TRANSFORM.STYLINGS.edge_header_flexed_text}>
 
