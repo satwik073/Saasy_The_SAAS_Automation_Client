@@ -8,7 +8,7 @@ import { footer_styling_attached } from '../Constant/layouts_controlling';
 import SaaSyAutomaiton from '@/Globals/GlobalSiteNavigation/NavigationWrapping/SaaSyAutoSeperated/SaaSyAutomaiton';
 const PrimarySiteFooter = () => {
     return (
-        <Box component="footer" className="mt-[100px] w-full bg-gray-50 dark:bg-black">
+        <Box component="footer" className=" w-full bg-gray-50 dark:bg-black">
             <Grid container className={footer_styling_attached.resposnive_properties_padding}>
                 <Grid item lg={12} container className={footer_styling_attached.grid_containers}>
                     <Grid item lg={5} className="w-full lg:w-1/3 ">

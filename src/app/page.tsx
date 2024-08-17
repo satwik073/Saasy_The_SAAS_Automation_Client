@@ -12,6 +12,8 @@ import PrimaryNavigation from "../Globals/GlobalSiteNavigation/NavigationWrappin
 import { SpotlightPreview } from "../Pages/SpotLightCombined/SpotLightModuler";
 import { FeaturedSectionDemo } from "@/Pages/GridContainer/GridTerminalLayout";
 import { FeaturesSectionDemo } from "@/Pages/GridContainer/GridConstants";
+import PeopleEngaged from "@/Pages/Testimonials/PeopleEngaged";
+import { AuroraBackgroundDemo } from "@/Pages/Aura/AuraContainerReleased";
 
 
 
@@ -34,11 +36,20 @@ export default function Home() {
      <FeaturesSectionDemo/>
      <FeaturedSectionDemo/>
      </section>
-
-   
+     <PeopleEngaged/>
+  
       <section className="">
         {/* <LampContained/> */}
-        {/* <div className="flex flex-wrap items-center justify-center flex-col md:flex-row gap-8 -mt-72">
+        <div className="flex flex-wrap items-center justify-center flex-col md:flex-row gap-8 mt-20 ">
+        <div className="px-8">
+        <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-black dark:text-white">
+        Plans that suites most of the people
+        </h4>
+
+        <p className="text-sm lg:text-base  max-w-2xl  my-4 mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300">
+        Every AI is used by millions of people around the globe.Our APIs have fan bases and people fight for us over twitter.
+        </p>
+      </div>
         <CardContainer className="inter-var md:m-0 m-7 mt-0">
             <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-neutral-500/[0.1] dark:bg-black hover:border-emerald-500 border-black/[0.1] w-full md:!w-[350px] h-auto rounded-xl p-6 border">
               <CardItem
@@ -181,9 +192,10 @@ export default function Home() {
               </div>
             </CardBody>
           </CardContainer>
-        </div> */}
+        </div> 
         {/* <MacbookScroll/> */}
       </section>
+      <AuroraBackgroundDemo/>
       {/* <ContactForm/> */}
      <PrimarySiteFooter/>
       

@@ -7,7 +7,8 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { IconBrandYoutubeFilled } from "@tabler/icons-react";
 import Link from "next/link";
-
+import { InfiniteMovingCards } from "@/animations/infinite-moving-cards";
+import { clients } from "@/lib/constants";
 export function FeaturesSectionDemo() {
   const features = [
     {
@@ -106,30 +107,167 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
 };
 
 export const SkeletonOne = () => {
+  const images = [
+    "/p1.png",
+    "/p2.png",
+    "/p3.png",
+    "/p4.png",
+    "/p5.png",
+    "/p6.png",
+  ];
+
+  const imageVariants = {
+    whileHover: {
+      scale: 1.1,
+      rotate: 0,
+      zIndex: 100,
+    },
+    whileTap: {
+      scale: 1.1,
+      rotate: 0,
+      zIndex: 100,
+    },
+  };
   return (
-    <div className="relative flex py-8 px-2 gap-10 h-full">
-      
+    <div className="relative flex flex-col items-start p-8 gap-10 h-full overflow-hidden">
+      {/* TODO */}
+      <div className="flex flex-row -ml-20">
+        {images.map((image, idx) => (
+          <motion.div
+            variants={imageVariants}
+            key={"images-first" + idx}
+            style={{
+              rotate: Math.random() * 20 - 10,
+            }}
+            whileHover="whileHover"
+            whileTap="whileTap"
+            className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden"
+          >
+            <Image
+              src={image}
+              alt="bali images"
+              width="500"
+              height="500"
+              className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
+            />
+          </motion.div>
+        ))}
+      </div>
+      <div className="flex flex-row">
+        {images.map((image, idx) => (
+          <motion.div
+            key={"images-second" + idx}
+            style={{
+              rotate: Math.random() * 20 - 10,
+            }}
+            variants={imageVariants}
+            whileHover="whileHover"
+            whileTap="whileTap"
+            className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden"
+          >
+            <Image
+              src={image}
+              alt="bali images"
+              width="500"
+              height="500"
+              className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
+            />
+          </motion.div>
+        ))}
       </div>
 
-  
+      <div className="absolute left-0 z-[100] inset-y-0 w-20 bg-gradient-to-r from-white dark:from-black to-transparent  h-full pointer-events-none" />
+      <div className="absolute right-0 z-[100] inset-y-0 w-20 bg-gradient-to-l from-white dark:from-black  to-transparent h-full pointer-events-none" />
+    </div>
   );
+
 };
 
 export const SkeletonThree = () => {
+  const images = [
+    "/p1.png",
+    "/p2.png",
+    "/p3.png",
+    "/p4.png",
+    "/p5.png",
+    "/p6.png",
+  ];
+
+  const imageVariants = {
+    whileHover: {
+      scale: 1.1,
+      rotate: 0,
+      zIndex: 100,
+    },
+    whileTap: {
+      scale: 1.1,
+      rotate: 0,
+      zIndex: 100,
+    },
+  };
   return (
-   <div>
-    
-   </div>
+    <div className="relative flex flex-col items-start p-8 gap-10 h-full overflow-hidden">
+      {/* TODO */}
+      <div className="flex flex-row -ml-20">
+        {images.map((image, idx) => (
+          <motion.div
+            variants={imageVariants}
+            key={"images-first" + idx}
+            style={{
+              rotate: Math.random() * 20 - 10,
+            }}
+            whileHover="whileHover"
+            whileTap="whileTap"
+            className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden"
+          >
+            <Image
+              src={image}
+              alt="bali images"
+              width="500"
+              height="500"
+              className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
+            />
+          </motion.div>
+        ))}
+      </div>
+      <div className="flex flex-row">
+        {images.map((image, idx) => (
+          <motion.div
+            key={"images-second" + idx}
+            style={{
+              rotate: Math.random() * 20 - 10,
+            }}
+            variants={imageVariants}
+            whileHover="whileHover"
+            whileTap="whileTap"
+            className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden"
+          >
+            <Image
+              src={image}
+              alt="bali images"
+              width="500"
+              height="500"
+              className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
+            />
+          </motion.div>
+        ))}
+      </div>
+
+      <div className="absolute left-0 z-[100] inset-y-0 w-20 bg-gradient-to-r from-white dark:from-black to-transparent  h-full pointer-events-none" />
+      <div className="absolute right-0 z-[100] inset-y-0 w-20 bg-gradient-to-l from-white dark:from-black  to-transparent h-full pointer-events-none" />
+    </div>
   );
+
 };
 
 export const SkeletonTwo = () => {
   const images = [
-    "https://images.unsplash.com/photo-1517322048670-4fba75cbbb62?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1573790387438-4da905039392?q=80&w=3425&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1555400038-63f5ba517a47?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1554931670-4ebfabf6e7a9?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1546484475-7f7bd55792da?q=80&w=2581&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "/p1.png",
+    "/p2.png",
+    "/p3.png",
+    "/p4.png",
+    "/p5.png",
+    "/p6.png",
   ];
 
   const imageVariants = {
@@ -201,16 +339,37 @@ export const SkeletonTwo = () => {
 export const SkeletonFour = () => {
   return (
     <div className="h-60 md:h-60  flex flex-col items-center relative bg-transparent dark:bg-transparent mt-10">
+       <InfiniteMovingCards
+        items={clients}
+        className=" w-full dark:bg-transparent"
+        pauseOnHover
+        direction="right"
+        speed="slow"
+      />
+       <InfiniteMovingCards
+        items={clients}
+        className=" w-full dark:bg-transparent mt-3"
+        pauseOnHover
+        direction="left"
+        speed="slow"
+      />
+       <InfiniteMovingCards
+        items={clients}
+        className=" w-full dark:bg-transparent mt-3"
+        pauseOnHover
+        direction="left"
+        speed="slow"
+      />
       <Globe className="absolute -right-10 md:-right-10 -bottom-80 md:-bottom-72" />
     </div>
   );
 };
-
 export const Globe = ({ className }: { className?: string }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     let phi = 0;
+    let glowIntensity = 3;
 
     if (!canvasRef.current) return;
 
@@ -221,12 +380,12 @@ export const Globe = ({ className }: { className?: string }) => {
       phi: 0,
       theta: 0,
       dark: 1,
-      diffuse: 1.2,
+      diffuse: glowIntensity+10,
       mapSamples: 16000,
-      mapBrightness: 10,
+      mapBrightness: glowIntensity,
       baseColor: [0.3, 0.3, 0.3],
       markerColor: [0.1, 0.8, 1],
-     glowColor: [0.063, 0.725, 0.506],
+      glowColor: [1, 1, 1],
       markers: [
         // longitude latitude
         { location: [37.7595, -122.4367], size: 0.03 },
@@ -234,9 +393,16 @@ export const Globe = ({ className }: { className?: string }) => {
       ],
       onRender: (state) => {
         // Called on every animation frame.
-        // `state` will be an empty object, return updated params.
         state.phi = phi;
         phi += 0.01;
+
+        // Gradually increase the glow effect
+        if (glowIntensity < 2) {
+          glowIntensity += 0.01;
+        }
+
+        state.diffuse = glowIntensity;
+        state.mapBrightness = glowIntensity;
       },
     });
 
