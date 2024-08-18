@@ -5,7 +5,6 @@ import Image from "next/image";
 import createGlobe from "cobe";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { IconBrandYoutubeFilled } from "@tabler/icons-react";
 import Link from "next/link";
 import { InfiniteMovingCards } from "@/animations/infinite-moving-cards";
 import { clients } from "@/lib/constants";
