@@ -22,9 +22,7 @@ export const InfiniteMovingCards = ({
   const containerRef = React.useRef<HTMLDivElement>(null)
   const scrollerRef = React.useRef<HTMLUListElement>(null)
   const matches = useMediaQuery('(max-width:600px)');
-  useEffect(() => {
-    addAnimation()
-  }, [addAnimation])
+  
   
   const [start, setStart] = useState(false)
   function addAnimation() {
@@ -43,6 +41,9 @@ export const InfiniteMovingCards = ({
       setStart(true)
     }
   }
+  useEffect(() => {
+    addAnimation()
+  }, [addAnimation])
   const getDirection = () => {
     if (containerRef.current) {
       if (direction === 'left') {
