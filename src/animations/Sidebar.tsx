@@ -40,7 +40,7 @@ const MenuOptions: React.FC<Props> = () => {
     className: "shadow-sm",
 };
   return (
-    <nav className="dark:bg-black h-screen overflow-scroll flex flex-col items-center gap-10 py-4 px-9  w-16">
+    <nav className="dark:bg-black  overflow-scroll flex flex-col items-center gap-10 lg:py-5 py-4 px-9  w-16">
       <div className="flex flex-col items-center gap-8">
         <Link href="/" className="font-bold block text-center">
         <TRANSLATING_NAVIGATION_TEXT.toggle_switching_image_containers {...imageContainerProps} />
@@ -57,7 +57,7 @@ const MenuOptions: React.FC<Props> = () => {
                     >
                       <div className='text-sm'>
 
-                      <menuItem.Component size={24} />
+                      <menuItem.Component size={18} />
                       </div>
                     </Link>
                   </li>
@@ -70,22 +70,22 @@ const MenuOptions: React.FC<Props> = () => {
           </ul>
         </TooltipProvider>
         <Separator />
-        <div className="flex flex-col items-center gap-4 dark:bg-[#ffffff6e] py-4 px-2 rounded-full h-56 overflow-scroll border-[1px] w-12">
+        <div className="flex flex-col items-center gap-4 dark:bg-[#ffffff6e] py-3 px-2 rounded-full  h-full overflow-scroll border-[1px] w-12">
           {[LucideMousePointerClick, GitBranch, Database, GitBranch].map((Icon, index) => (
             <div
               key={index}
               className="relative block dark:bg-black p-2 rounded-full border-[1px] dark:border-t-[#353346] dark:border-t-[2px]"
             >
-              <Icon className="text-muted-foreground" size={16} />
+              <Icon className="text-muted-foreground" size={10} />
               <div
                 className={`border-l-2 border-muted-foreground/50 h-6 absolute left-1/2 transform -translate-x-1/2 -bottom-[30px] ${index % 2 === 0 ? 'block' : 'hidden'}`}
               />
             </div>
           ))}
         </div>
-      </div>
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-center gap-2">
         <DropdownMenuComponent />
+      </div>
       </div>
     </nav>
   )
