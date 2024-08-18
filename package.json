@@ -27,6 +27,7 @@
     "cobe": "^0.6.3",
     "express": "^4.19.2",
     "framer-motion": "^11.3.28",
+    "helmet": "^7.1.0",
     "lucide-react": "^0.428.0",
     "mini-svg-data-uri": "^1.4.4",
     "next": "14.2.5",

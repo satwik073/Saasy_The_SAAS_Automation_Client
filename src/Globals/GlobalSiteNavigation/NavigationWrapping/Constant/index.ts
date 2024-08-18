@@ -3,14 +3,14 @@ import DropdownMenuComponent from "../../Components/DropdownMenu";
 import SaaSyAutomaiton from "../SaaSyAutoSeperated/SaaSyAutomaiton";
 import { AiFillThunderbolt } from "react-icons/ai";
 interface NavitemDestructured {
-    targeted_id : number,
-    route_link_name : string,
-    specified_path : string
+    targeted_id: number,
+    route_link_name: string,
+    specified_path: string
 }
 interface TranslatingNavigationText {
     logo_text_half_divided: string;
     logo_text_tail: string;
-    left_aside_navbar_product : typeof SaaSyAutomaiton
+    left_aside_navbar_product: typeof SaaSyAutomaiton
     dropdown_changing_theme_component: typeof DropdownMenuComponent;
     dark_theme_saasy_icon: typeof AiFillThunderbolt;
     navigation_links_handler: NavitemDestructured[];
@@ -22,19 +22,21 @@ interface TranslatingNavigationText {
     drop_down_system_content: string;
     web_page_current_light_theme_color: string;
     web_page_current_dark_theme_color: string;
-    toggle_switching_image_containers : typeof ImageContainer,
+    spotlight_hidden: string,
+    spotlight_dark_base: string
+    toggle_switching_image_containers: typeof ImageContainer,
     theme_selectors: string[];
-  }
-  
-  export const TRANSLATING_NAVIGATION_TEXT: TranslatingNavigationText = {
+}
 
-    logo_text_half_divided : "Saa",
-    logo_text_tail : "y",
-    left_aside_navbar_product : SaaSyAutomaiton,
-    toggle_switching_image_containers : ImageContainer,
-    dropdown_changing_theme_component : DropdownMenuComponent,
-    dark_theme_saasy_icon : AiFillThunderbolt,
-    navigation_links_handler : [
+export const TRANSLATING_NAVIGATION_TEXT: TranslatingNavigationText = {
+
+    logo_text_half_divided: "Saa",
+    logo_text_tail: "y",
+    left_aside_navbar_product: SaaSyAutomaiton,
+    toggle_switching_image_containers: ImageContainer,
+    dropdown_changing_theme_component: DropdownMenuComponent,
+    dark_theme_saasy_icon: AiFillThunderbolt,
+    navigation_links_handler: [
         {
             "targeted_id": 1,
             route_link_name: "Products",
@@ -66,13 +68,15 @@ interface TranslatingNavigationText {
             specified_path: "/enterprise"
         },
     ] as NavitemDestructured[],
-    drop_down_content : ["Light", "Dark", "System"],
-    drop_down_dark_content : "Dark",
-    drop_down_light_content : "Light",
-    drop_down_light_connecting_content : "light",
-    drop_down_dark_connecting_content : "dark",
-    drop_down_system_content : "System",
-    web_page_current_light_theme_color : "white",
-    web_page_current_dark_theme_color : "black",
-    theme_selectors : ["light", "dark", "system"]
+    drop_down_content: ["Light", "Dark", "System"],
+    drop_down_dark_content: "Dark",
+    drop_down_light_content: "Light",
+    drop_down_light_connecting_content: "light",
+    drop_down_dark_connecting_content: "dark",
+    drop_down_system_content: "System",
+    web_page_current_light_theme_color: "white",
+    web_page_current_dark_theme_color: "black",
+    theme_selectors: ["light", "dark", "system"],
+    spotlight_hidden: '#FFF',
+    spotlight_dark_base: '10B981'
 }

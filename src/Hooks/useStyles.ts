@@ -1,12 +1,10 @@
-import { makeStyles } from '@mui/styles';
+import { css } from '@emotion/react';
+import { TRANSLATING_NAVIGATION_TEXT } from "@/Globals/GlobalSiteNavigation/NavigationWrapping/Constant";
 
-const useStyles = makeStyles({
-    toggling_light_themes_color: {
-            color: "#FFF",
-    },
-    toggling_dark_themes_color: {
-            color: "#10B981",
-    },
+const useStyles = (theme: string) => ({
+  toggling_themes_color: css`
+    color: ${theme === TRANSLATING_NAVIGATION_TEXT.drop_down_dark_connecting_content ? '#10B981' : '#FFF'};
+  `,
 });
 
 export default useStyles;

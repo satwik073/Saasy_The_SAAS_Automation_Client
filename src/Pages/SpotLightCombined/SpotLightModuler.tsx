@@ -1,5 +1,5 @@
 'use client'
-import React from "react";
+import React, { SetStateAction } from "react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Spotlight } from "./Components/ui/spot_light";
@@ -11,17 +11,26 @@ import { SPOTLIGHT_CUSTOM_STYLINGS_ATTACHED } from "./Constant/layout_controllin
 import { Box, Grid, Typography } from "@mui/material";
 import { BOX_COMPONENTS_SEPERATED, TYPOGRAPHY_VARIANTS_SEPERATED } from "@/constants/variants_data";
 import { TRANSLATING_NAVIGATION_TEXT } from "@/Globals/GlobalSiteNavigation/NavigationWrapping/Constant";
-import useStyles from "@/Hooks/useStyles";
 
+
+interface ThemeController {
+   [x: string]: SetStateAction<string>;
+   classes_toggling_light_themes_color:string,
+   classes_toggling_dark_themes_color: string
+}
+const themeProp: ThemeController = {
+  classes_toggling_dark_themes_color: TRANSLATING_NAVIGATION_TEXT.spotlight_dark_base,
+  classes_toggling_light_themes_color: TRANSLATING_NAVIGATION_TEXT.spotlight_hidden
+}
 export function SpotlightPreview() {
-  const classes = useStyles()
+  
   const browse_components_fetched = displaying_buttons['browse_components'];
   const custom_components_fetched = displaying_buttons['custom_components'];
   const [fill_color_after_theme_change, set_color_after_theme_change] = useState(`${TRANSLATING_NAVIGATION_TEXT.web_page_current_dark_theme_color}`);
   useEffect(() => {
     const theme = localStorage.getItem('theme');
     const is_light_theme = theme === `${TRANSLATING_NAVIGATION_TEXT.drop_down_light_connecting_content}`;
-    set_color_after_theme_change(is_light_theme ? classes.toggling_light_themes_color : classes.toggling_dark_themes_color);
+    set_color_after_theme_change(is_light_theme ? themeProp.classes_toggling_light_themes_color : themeProp.classes_toggling_dark_themes_color);
   }, []);
   return (
     <Box component={BOX_COMPONENTS_SEPERATED.components_fetched.header} className={SPOTLIGHT_CUSTOM_STYLINGS_ATTACHED.splot_light_main}>

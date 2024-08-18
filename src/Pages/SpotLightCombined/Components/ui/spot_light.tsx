@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 type SpotlightProps = {
   className?: string;
-  fill_valuable_color_blend?: string;
+  fill_valuable_color_blend?: string | undefined;
 };
 
 export const Spotlight = ({ className, fill_valuable_color_blend }: SpotlightProps) => {
