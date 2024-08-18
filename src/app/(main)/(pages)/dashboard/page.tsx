@@ -4,10 +4,9 @@ type Props = {}
 
 const DashboardPageSettled = (props: Props) => {
   return (
-    <div className="w-full flex flex-col relative">
-      <h1 className="text-4xl sticky top-0 z-10 bg-background/50 backdrop-blur-lg border-b m-0 p-2">
-        Dashboard
-      </h1>
+    <div className="w-full flex flex-col gap-4 relative ">
+        <h1 className="text-3xl p-3 sticky top-0 z-10 bg-background/50 backdrop-blur-lg flex  border-b">
+        Dashboard</h1>
     </div>
   )
 }
