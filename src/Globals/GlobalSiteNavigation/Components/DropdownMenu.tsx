@@ -11,7 +11,7 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { translating_navigattion_text } from '../NavigationWrapping/Constant'
+import { TRANSLATING_NAVIGATION_TEXT } from '../NavigationWrapping/Constant'
 
 type Props = {}
 
@@ -43,7 +43,7 @@ const DropdownMenuComponent = (props: Props) => {
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className='z-50 mt-6'>
-                {translating_navigattion_text.theme_selectors.map((theme, index) => (<DropdownMenuItem key={index} onClick={() => handle_theme_change(theme)}>{translating_navigattion_text.drop_down_content[index]}</DropdownMenuItem>))}
+                {TRANSLATING_NAVIGATION_TEXT.theme_selectors.map((theme_iteration, index_reduction_value) => (<DropdownMenuItem key={index_reduction_value} onClick={() => handle_theme_change(theme_iteration)}>{TRANSLATING_NAVIGATION_TEXT.drop_down_content[index_reduction_value]}</DropdownMenuItem>))}
             </DropdownMenuContent>
         </DropdownMenu>
     )

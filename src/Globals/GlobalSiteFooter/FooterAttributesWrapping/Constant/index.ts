@@ -1,8 +1,33 @@
+import { ComponentType } from 'react';
+import { FaDribbble, FaFacebook, FaGithub, FaInstagram, FaTwitter } from 'react-icons/fa';
 
-import { FaDribbble, FaFacebook, FaGithub, FaInstagram, FaTwitter } from 'react-icons/fa'; // Correct import path
+interface LinkData {
+    path_specified: string;
+    text_fields: string;
+}
 
-export const translating_footer_text = {
-    footer_headlines: " Revolutionize your business with seamless automation and cutting-edge technology, empowering you to focus on growth and innovation while we handle the complexities of your digital operations",
+interface SocialMediaLink {
+    target_window: string;
+    rel: string;
+    path_specified: string;
+    icons_from_react: ComponentType;
+    label: string;
+}
+
+interface FooterHeadings {
+    fetched_headings_attached: string;
+    links_estaiblished: LinkData[];
+}
+
+export interface TranslatingFooterText {
+    footer_headlines: string;
+    footer_copyright_issue_marked: string;
+    footer_fetched_headings_attached_links: FooterHeadings[];
+    social_media_connections: SocialMediaLink[];
+}
+
+export const TRANSLATING_FOOTER_TEXT: TranslatingFooterText = {
+    footer_headlines: "Revolutionize your business with seamless automation and cutting-edge technology, empowering you to focus on growth and innovation while we handle the complexities of your digital operations",
     footer_copyright_issue_marked: "2024 SaaSy. All rights reserved.",
     footer_fetched_headings_attached_links: [
         {
@@ -48,14 +73,11 @@ export const translating_footer_text = {
             ]
         }
     ],
-   
-social_media_connections : [
-    { target_window: "_blank", rel: "noreferrer", path_specified: '#', icons_from_react:FaFacebook, label: 'Facebook' },
-    { target_window: "_blank", rel: "noreferrer", path_specified: '#', icons_from_react: FaInstagram, label: 'Instagram' },
-    { target_window: "_blank", rel: "noreferrer", path_specified: '#', icons_from_react: FaTwitter, label: 'Twitter' },
-    { target_window: "_blank", rel: "noreferrer", path_specified: '#', icons_from_react: FaGithub, label: 'GitHub' },
-    { target_window: "_blank", rel: "noreferrer", path_specified: '#', icons_from_react: FaDribbble, label: 'Dribbble' }
-]
-
+    social_media_connections: [
+        { target_window: "_blank", rel: "noreferrer", path_specified: '#', icons_from_react: FaFacebook, label: 'Facebook' },
+        { target_window: "_blank", rel: "noreferrer", path_specified: '#', icons_from_react: FaInstagram, label: 'Instagram' },
+        { target_window: "_blank", rel: "noreferrer", path_specified: '#', icons_from_react: FaTwitter, label: 'Twitter' },
+        { target_window: "_blank", rel: "noreferrer", path_specified: '#', icons_from_react: FaGithub, label: 'GitHub' },
+        { target_window: "_blank", rel: "noreferrer", path_specified: '#', icons_from_react: FaDribbble, label: 'Dribbble' }
+    ]
 };
-

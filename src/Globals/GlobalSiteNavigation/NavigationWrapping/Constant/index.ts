@@ -1,3 +1,4 @@
+import ImageContainer from "@/components/Images/ImageContainer";
 import DropdownMenuComponent from "../../Components/DropdownMenu";
 import SaaSyAutomaiton from "../SaaSyAutoSeperated/SaaSyAutomaiton";
 import { AiFillThunderbolt } from "react-icons/ai";
@@ -6,9 +7,31 @@ interface NavitemDestructured {
     route_link_name : string,
     specified_path : string
 }
-export const translating_navigattion_text = {
+interface TranslatingNavigationText {
+    logo_text_half_divided: string;
+    logo_text_tail: string;
+    left_aside_navbar_product : typeof SaaSyAutomaiton
+    dropdown_changing_theme_component: typeof DropdownMenuComponent;
+    dark_theme_saasy_icon: typeof AiFillThunderbolt;
+    navigation_links_handler: NavitemDestructured[];
+    drop_down_content: string[];
+    drop_down_dark_content: string;
+    drop_down_light_content: string;
+    drop_down_light_connecting_content: string;
+    drop_down_dark_connecting_content: string;
+    drop_down_system_content: string;
+    web_page_current_light_theme_color: string;
+    web_page_current_dark_theme_color: string;
+    toggle_switching_image_containers : typeof ImageContainer,
+    theme_selectors: string[];
+  }
+  
+  export const TRANSLATING_NAVIGATION_TEXT: TranslatingNavigationText = {
+
     logo_text_half_divided : "Saa",
     logo_text_tail : "y",
+    left_aside_navbar_product : SaaSyAutomaiton,
+    toggle_switching_image_containers : ImageContainer,
     dropdown_changing_theme_component : DropdownMenuComponent,
     dark_theme_saasy_icon : AiFillThunderbolt,
     navigation_links_handler : [
