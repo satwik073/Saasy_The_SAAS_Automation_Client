@@ -36,7 +36,7 @@ export default function Home() {
      <FeaturesSectionDemo/>
      <FeaturedSectionDemo/>
      </section>
-     <PeopleEngaged/>
+     
   
       <section className="">
         {/* <LampContained/> */}
@@ -51,7 +51,7 @@ export default function Home() {
         </p>
       </div>
       <div className="flex items-center justify-center gap-4">
-  <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+  <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mb-5 p-4">
     {/* Hobby Plan */}
     <CardContainer className="inter-var">
       <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-neutral-500/[0.1] dark:bg-black hover:border-emerald-500 border-black/[0.1] w-full md:!w-[350px] h-auto rounded-xl p-6 border">
@@ -334,8 +334,9 @@ export default function Home() {
 </div>
         {/* <MacbookScroll/> */}
       </section>
-      <AuroraBackgroundDemo/>
+      {/* <AuroraBackgroundDemo/> */}
       {/* <ContactForm/> */}
+      <PeopleEngaged/>
      <PrimarySiteFooter/>
       
     </main>

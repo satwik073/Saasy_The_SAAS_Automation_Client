@@ -129,56 +129,23 @@ export const SkeletonOne = () => {
     },
   };
   return (
-    <div className="relative flex flex-col items-start p-8 gap-10 h-full overflow-hidden">
-      {/* TODO */}
-      <div className="flex flex-row -ml-20">
-        {images.map((image, idx) => (
-          <motion.div
-            variants={imageVariants}
-            key={"images-first" + idx}
-            style={{
-              rotate: Math.random() * 20 - 10,
-            }}
-            whileHover="whileHover"
-            whileTap="whileTap"
-            className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden"
-          >
-            <Image
-              src={image}
-              alt="bali images"
-              width="500"
-              height="500"
-              className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
-            />
-          </motion.div>
-        ))}
-      </div>
-      <div className="flex flex-row">
-        {images.map((image, idx) => (
-          <motion.div
-            key={"images-second" + idx}
-            style={{
-              rotate: Math.random() * 20 - 10,
-            }}
-            variants={imageVariants}
-            whileHover="whileHover"
-            whileTap="whileTap"
-            className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden"
-          >
-            <Image
-              src={image}
-              alt="bali images"
-              width="500"
-              height="500"
-              className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
-            />
-          </motion.div>
-        ))}
+    <div className="relative flex py-8 px-2 gap-10 h-full">
+      <div className="w-full p-5 mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full">
+        <div className="flex flex-1 w-full h-full flex-col space-y-2">
+          <Image
+            src="/p1.png"
+            alt="header"
+            width={800}
+            height={800}
+            className="w-full h-full md:max-w-[100%] nd:h-auto aspect-square object-cover object-left-top rounded-sm mx-auto"
+          />
+        </div>
       </div>
 
-      <div className="absolute left-0 z-[100] inset-y-0 w-20 bg-gradient-to-r from-white dark:from-black to-transparent  h-full pointer-events-none" />
-      <div className="absolute right-0 z-[100] inset-y-0 w-20 bg-gradient-to-l from-white dark:from-black  to-transparent h-full pointer-events-none" />
+      <div className="absolute bottom-0 z-40 inset-x-0 h-60 bg-gradient-to-t from-white dark:from-black via-white dark:via-black to-transparent w-full pointer-events-none" />
+      <div className="absolute top-0 z-40 inset-x-0 h-60 bg-gradient-to-b from-white dark:from-black via-transparent to-transparent w-full pointer-events-none" />
     </div>
+
   );
 
 };
@@ -206,56 +173,23 @@ export const SkeletonThree = () => {
     },
   };
   return (
-    <div className="relative flex flex-col items-start p-8 gap-10 h-full overflow-hidden">
-      {/* TODO */}
-      <div className="flex flex-row -ml-20">
-        {images.map((image, idx) => (
-          <motion.div
-            variants={imageVariants}
-            key={"images-first" + idx}
-            style={{
-              rotate: Math.random() * 20 - 10,
-            }}
-            whileHover="whileHover"
-            whileTap="whileTap"
-            className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden"
-          >
-            <Image
-              src={image}
-              alt="bali images"
-              width="500"
-              height="500"
-              className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
-            />
-          </motion.div>
-        ))}
-      </div>
-      <div className="flex flex-row">
-        {images.map((image, idx) => (
-          <motion.div
-            key={"images-second" + idx}
-            style={{
-              rotate: Math.random() * 20 - 10,
-            }}
-            variants={imageVariants}
-            whileHover="whileHover"
-            whileTap="whileTap"
-            className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden"
-          >
-            <Image
-              src={image}
-              alt="bali images"
-              width="500"
-              height="500"
-              className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
-            />
-          </motion.div>
-        ))}
+    <div className="relative flex py-8 px-2 gap-10 h-full">
+      <div className="w-full p-5 mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full">
+        <div className="flex flex-1 w-full h-full flex-col space-y-2">
+          <Image
+            src="/p5.png"
+            alt="header"
+            width={800}
+            height={800}
+            className="w-full h-full md:max-w-[100%] md:h-auto aspect-square object-cover object-left-top rounded-sm mx-auto"
+          />
+        </div>
       </div>
 
-      <div className="absolute left-0 z-[100] inset-y-0 w-20 bg-gradient-to-r from-white dark:from-black to-transparent  h-full pointer-events-none" />
-      <div className="absolute right-0 z-[100] inset-y-0 w-20 bg-gradient-to-l from-white dark:from-black  to-transparent h-full pointer-events-none" />
+      <div className="absolute bottom-0 z-40 inset-x-0 h-60 bg-gradient-to-t from-white dark:from-black via-white dark:via-black to-transparent w-full pointer-events-none" />
+      <div className="absolute top-0 z-40 inset-x-0 h-60 bg-gradient-to-b from-white dark:from-black via-transparent to-transparent w-full pointer-events-none" />
     </div>
+
   );
 
 };
@@ -339,21 +273,21 @@ export const SkeletonTwo = () => {
 export const SkeletonFour = () => {
   return (
     <div className="h-60 md:h-60  flex flex-col items-center relative bg-transparent dark:bg-transparent mt-10">
-       <InfiniteMovingCards
+      <InfiniteMovingCards
         items={clients}
         className=" w-full dark:bg-transparent"
         pauseOnHover
         direction="right"
         speed="slow"
       />
-       <InfiniteMovingCards
+      <InfiniteMovingCards
         items={clients}
         className=" w-full dark:bg-transparent mt-3"
         pauseOnHover
         direction="left"
         speed="slow"
       />
-       <InfiniteMovingCards
+      <InfiniteMovingCards
         items={clients}
         className=" w-full dark:bg-transparent mt-3"
         pauseOnHover
@@ -380,7 +314,7 @@ export const Globe = ({ className }: { className?: string }) => {
       phi: 0,
       theta: 0,
       dark: 1,
-      diffuse: glowIntensity+10,
+      diffuse: glowIntensity + 10,
       mapSamples: 16000,
       mapBrightness: glowIntensity,
       baseColor: [0.3, 0.3, 0.3],
