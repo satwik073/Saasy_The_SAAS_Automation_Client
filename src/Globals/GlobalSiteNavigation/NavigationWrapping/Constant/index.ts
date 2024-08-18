@@ -78,5 +78,5 @@ export const TRANSLATING_NAVIGATION_TEXT: TranslatingNavigationText = {
     web_page_current_dark_theme_color: "black",
     theme_selectors: ["light", "dark", "system"],
     spotlight_hidden: '#FFF',
-    spotlight_dark_base: '10B981'
+    spotlight_dark_base: '#10B981'
 }
