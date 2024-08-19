@@ -15,6 +15,7 @@ import { Separator } from '@/Globals/ToolTips/Seperator/SeperatorContainer'
 import { Database, GitBranch, LucideMousePointerClick } from 'lucide-react'
 import DropdownMenuComponent from '@/Globals/GlobalSiteNavigation/Components/DropdownMenu'
 import { TRANSLATING_NAVIGATION_TEXT } from '@/Globals/GlobalSiteNavigation/NavigationWrapping/Constant'
+import { FaBolt } from 'react-icons/fa'
 
 interface ImageContainerAttributes {
   width: number;
@@ -43,7 +44,9 @@ const MenuOptions: React.FC<Props> = () => {
     <nav className="dark:bg-black  overflow-scroll flex flex-col items-center gap-10 lg:py-5 py-4 px-9  w-16">
       <div className="flex flex-col items-center gap-8">
         <Link href="/" className="font-bold block text-center">
-        <TRANSLATING_NAVIGATION_TEXT.toggle_switching_image_containers {...imageContainerProps} />
+        {/* <TRANSLATING_NAVIGATION_TEXT.toggle_switching_image_containers {...imageContainerProps} />
+         */}
+         <FaBolt size={24} className='dark:text-white text-black'/>
         </Link>
         <TooltipProvider>
           <ul className="flex flex-col items-center gap-7">
@@ -57,7 +60,7 @@ const MenuOptions: React.FC<Props> = () => {
                     >
                       <div className='text-sm'>
 
-                      <menuItem.Component size={18} />
+                      <menuItem.Component size={22} fontWeight={'bold'} />
                       </div>
                     </Link>
                   </li>
