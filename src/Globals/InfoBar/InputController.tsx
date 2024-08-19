@@ -1,8 +1,8 @@
 'use client'
-import React, { useEffect } from 'react'
-import DropdownMenuComponent from '../GlobalSiteNavigation/Components/DropdownMenu'
-import { Book, Headphones, Search } from 'lucide-react'
 
+import React, { useState } from 'react'
+import { Book, Headphones, Search, Menu } from 'lucide-react'
+import MenuSmallOptions from './Components/SmallScreenBar'
 
 import {
   Tooltip,
@@ -10,37 +10,40 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "../ToolTips/TooltipContent"
-import Input from '@mui/material/Input/Input'
 import { PlaceholdersAndVanishInputDemo } from './Animations/input_placeholder'
+import { useMediaQuery } from '@mui/material'
+import DropdownMenuComponent from '../GlobalSiteNavigation/Components/DropdownMenu'
 
 
 type Props = {}
-
 const InfoBar = (props: Props) => {
-//   const { credits, tier, setCredits, setTier } = useBilling()
+  const isSmallScreen = useMediaQuery('(max-width: 600px)');
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-//   const onGetPayment = async () => {
-//     const response = await onPaymentDetails()
-//     if (response) {
-//       setTier(response.tier!)
-//       setCredits(response.credits!)
-//     }
-//   }
-
-//   useEffect(() => {
-//     onGetPayment()
-//   }, [])
+  const toggleDrawer = () => {
+    setIsDrawerOpen(!isDrawerOpen);
+  };
 
   return (
-    <div className="flex flex-row justify-end gap-6 items-center px-4 py-4 w-full dark:bg-black ">
+    <div className="flex flex-row static top-0 justify-end gap-6 items-center px-4 py-4 w-full dark:bg-black">
+      {isSmallScreen && (
+        <button onClick={toggleDrawer} className="mr-auto">
+          <Menu />
+        </button>
+      )}
       <span className="flex items-center gap-2 font-bold">
-        <p className="text-sm font-light text-gray-300 md:block hidden">Credits</p>
+        <p className="text-sm font-light text-gray-300 md:block hidden">
+          Credits
+        </p>
       </span>
       <span className="flex items-center rounded-full bg-muted px-2">
         <Search />
-        <PlaceholdersAndVanishInputDemo/>
+        <PlaceholdersAndVanishInputDemo />
       </span>
       <TooltipProvider>
+      <div className="flex items-center gap-4 py-3">
+            <DropdownMenuComponent />
+          </div>
         <Tooltip delayDuration={0}>
           <TooltipTrigger>
             <Headphones />
@@ -60,9 +63,13 @@ const InfoBar = (props: Props) => {
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>
-      {/* <UserButton /> */}
+      {isDrawerOpen && (
+        <div className="fixed inset-0 z-50 flex">
+          <MenuSmallOptions isDrawerOpen={isDrawerOpen} onCloseDrawer={toggleDrawer} />
+        </div>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default InfoBar
+export default InfoBar;

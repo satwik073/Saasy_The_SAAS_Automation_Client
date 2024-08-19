@@ -1,20 +1,19 @@
-
 import MenuOptions from '@/animations/Sidebar'
 import InfoBar from '@/Globals/InfoBar/InputController'
-import React, { Children } from 'react'
+import React from 'react'
 
-type Props = {children : React.ReactNode}
+type Props = {children: React.ReactNode}
 
-const layout = (props: Props) => {
+const Layout = (props: Props) => {
   return (
-   <div className="flex overflow-y-hidden h-[100dvh]" >
-    <MenuOptions/>
-    <div className="w-full">
-      <InfoBar/>
+    <div className="flex overflow-y-auto bg-background/50 backdrop-blur-lg ">
+      <MenuOptions />
+      <div className="w-full flex flex-col">
+        <InfoBar />
         {props.children}
+      </div>
     </div>
-   </div>
   )
 }
 
-export default layout
+export default Layout
