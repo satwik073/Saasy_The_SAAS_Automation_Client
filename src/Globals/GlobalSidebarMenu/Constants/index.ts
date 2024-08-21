@@ -16,6 +16,7 @@ interface MenuOptionsAttributes{
     database_defined :  typeof Database,
     tool_tip_content : typeof TooltipContent,
     drop_down_menu_content_wrapped :  typeof DropdownMenuComponent
+    empty_state : string,
 }
 export const  MENU_OPTIONS_SCREEN_CONTENT :{ CONTENT  : MenuOptionsAttributes }= {
     CONTENT :{
@@ -29,6 +30,7 @@ export const  MENU_OPTIONS_SCREEN_CONTENT :{ CONTENT  : MenuOptionsAttributes }=
         lucid_pointer_click : LucideMousePointerClick,
         git_branch_aligned : GitBranch,
         database_defined : Database,
+        empty_state : '',
         drop_down_menu_content_wrapped : DropdownMenuComponent
 
     }

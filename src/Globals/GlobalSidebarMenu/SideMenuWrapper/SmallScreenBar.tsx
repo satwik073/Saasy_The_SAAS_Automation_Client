@@ -1,103 +1,94 @@
 'use client'
-
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger
-} from "../../GlobalToolTips/TooltipContent"
 import { menuOptions } from '@/constants'
 import clsx from 'clsx'
-import { Separator } from '../../GlobalToolTips/Seperator/SeperatorContainer'
-import { Cross, Database, GitBranch, LucideMousePointerClick } from 'lucide-react'
 import DropdownMenuComponent from '@/Globals/GlobalSiteNavigation/Components/DropdownMenu'
 import { TRANSLATING_NAVIGATION_TEXT } from '@/Globals/GlobalSiteNavigation/NavigationWrapping/Constant'
-import { FaBolt } from 'react-icons/fa'
-import { useMediaQuery } from '@mui/material'
-import { ClearOutlined } from '@mui/icons-material'
+import { Box, Button, List, ListItem, Typography, useMediaQuery } from '@mui/material'
+import { MENU_OPTIONS_CREATED } from '../Constants/layout_controlling'
+import { BOX_COMPONENTS_SEPERATED, TYPOGRAPHY_VARIANTS_SEPERATED } from '@/constants/variants_data'
+import { MENU_OPTIONS_SCREEN_CONTENT } from '../Constants'
+import { extended_classes } from '@/constants/use_common_styling'
+import { defualt_and_defined_routes } from '@/constants/standard_routes'
+import { INFINITE_MOVING_CARDS_ATTRIBUTES } from '@/Pages/InfiniteScrollers/Constants'
 
-interface ImageContainerAttributes {
-  width: number;
-  height: number;
-  alt: string;
-  src: string;
+interface ContainerAttributes {
+  is_drawer_open_success?: boolean;
+  on_close_drawer?: () => void;
+}
+interface ContainerExtended extends ContainerAttributes {
+  children?: React.ReactNode;
   className?: string;
-}
-
-type Props = {
-  isDrawerOpen?: boolean;
-  onCloseDrawer?: () => void;
-}
-const MenuSmallOptions: React.FC<Props> = ({ isDrawerOpen, onCloseDrawer }) => {
-    const isSmallScreen = useMediaQuery('(max-width: 600px)');
-    const [fillTransitionColor, setTransitionFillColor] = useState<string>('');
-
+  is_drawer_open?: boolean;
+  is_drawer_open_success?: boolean;
+  }
+const MenuSmallOptions: React.FC<ContainerExtended> = ({ is_drawer_open_success, on_close_drawer , className, children }) => {
+  const is_small_screen_area = useMediaQuery(`${extended_classes.media_queries.mobile_devices_below_600px}`);
+  const [fill_transition_color, set_transition_fill_color] = useState<string>(`${MENU_OPTIONS_SCREEN_CONTENT.CONTENT.empty_state}`);
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const theme = localStorage.getItem('theme');
-      setTransitionFillColor(
+      set_transition_fill_color(
         theme === TRANSLATING_NAVIGATION_TEXT.drop_down_light_connecting_content
           ? ''
           : TRANSLATING_NAVIGATION_TEXT.web_page_current_dark_theme_color
       );
     }
   }, []);
-  
-    const pathName = usePathname();
-  
-    return (
-      <nav
-        className={clsx(
-          "dark:bg-black bg-white sm:flex flex-col lg:py-5 py-4",
-          {
-            "w-14 md:w-16 h-full": !isSmallScreen,
-            "fixed inset-0 z-50 bg-black   flex flex-col items-start gap-10 p-5 w-64":
-              isSmallScreen && isDrawerOpen,
-            hidden: isSmallScreen && !isDrawerOpen,
-          }
-        )}
-      >
-        <div className="flex w-full flex-col text-left">
-          {isSmallScreen && isDrawerOpen && (
-            <button onClick={onCloseDrawer} className="flex justify-end">
-                <ClearOutlined/>
-            </button>
-          )}
-          <TooltipProvider>
-            <ul className="flex flex-col items-start w-full">
-              {menuOptions.map((menuItem) => (
-                <Tooltip key={menuItem.name} delayDuration={0}>
-                  <TooltipTrigger>
-                    <li className="">
-                      <Link
-                        href={menuItem.href}
-                        className={clsx("hover:text-primary transition-colors", {
-                          "text-primary": pathName === menuItem.href,
-                        })}
-                      >
-                        <div className='flex items-center gap-4 py-3'>
+  const path_name_specified = usePathname()
+  return (
+    <Box component={BOX_COMPONENTS_SEPERATED.components_fetched.nav}
+      className={clsx(
+        MENU_OPTIONS_CREATED.FLEXED_CONTAINERS.sidebar_overall_content,
+        {
+          [MENU_OPTIONS_CREATED.FLEXED_CONTAINERS.equilant_to_sidebar]: !is_small_screen_area,
+          [MENU_OPTIONS_CREATED.FLEXED_CONTAINERS.ternary_operating_container]: is_small_screen_area && is_drawer_open_success,
+          [extended_classes.hiding_element]: is_small_screen_area && !is_drawer_open_success,
+        }
+      )}
+    >
 
-                        <menuItem.Component size={22}/>
-                        <p className='font-bold text-md'>{menuItem.name}</p>
-                        </div>
-                      </Link>
-                    </li>
-                  </TooltipTrigger>
-                  <TooltipContent
-                    side="right"
-                    className="bg-black/10 backdrop-blur-xl"
-                  >
-                  </TooltipContent>
-                </Tooltip>
-              ))}
-            </ul>
-          </TooltipProvider>
-          
-        </div>
-      </nav>
+      <Box component={BOX_COMPONENTS_SEPERATED.components_fetched.section} className="flex flex-col items-center gap-8">
+        {is_small_screen_area && is_drawer_open_success && (
+          <Button onClick={on_close_drawer} className="self-end text-white">
+            <MENU_OPTIONS_SCREEN_CONTENT.CONTENT.drawer_exit_enabled />
+          </Button>
+        )}
+        <Link href={`${defualt_and_defined_routes.default_ciphers}`} className="font-bold block text-center">
+          <MENU_OPTIONS_SCREEN_CONTENT.CONTENT.logo_icon_setteled size={24} className="dark:text-white text-black" />
+        </Link>
+        <MENU_OPTIONS_SCREEN_CONTENT.CONTENT.tool_tip_provider>
+          <List className="flex flex-col items-center gap-7">
+            {menuOptions.map((menu_items_controller) => (
+              <MENU_OPTIONS_SCREEN_CONTENT.CONTENT.tool_tip_wrapper key={menu_items_controller.naming_determined} delayDuration={0}>
+                <MENU_OPTIONS_SCREEN_CONTENT.CONTENT.tool_tip_trigger>
+                  <ListItem className={extended_classes.block_element}>
+                    <Link
+                      href={menu_items_controller.href_routes_enabled}
+                      className={clsx(`hover:${extended_classes.primary_textures} transition-colors`, {
+                        [extended_classes.primary_textures]: path_name_specified === menu_items_controller.href_routes_enabled,
+                      })}
+                    >
+                      <Box className="text-sm">
+                        <menu_items_controller.Component size={22} fontWeight={'bold'} />
+                      </Box>
+                    </Link>
+                  </ListItem>
+                </MENU_OPTIONS_SCREEN_CONTENT.CONTENT.tool_tip_trigger>
+                <MENU_OPTIONS_SCREEN_CONTENT.CONTENT.tool_tip_content
+                  side={`${INFINITE_MOVING_CARDS_ATTRIBUTES.direction_defined_forth}`}
+                  className="bg-black/10 backdrop-blur-xl"
+                >
+                  <Typography variant={TYPOGRAPHY_VARIANTS_SEPERATED.body_variant.body1}>{menu_items_controller.naming_determined}</Typography>
+                </MENU_OPTIONS_SCREEN_CONTENT.CONTENT.tool_tip_content>
+              </MENU_OPTIONS_SCREEN_CONTENT.CONTENT.tool_tip_wrapper>
+            ))}
+          </List>
+        </MENU_OPTIONS_SCREEN_CONTENT.CONTENT.tool_tip_provider>
+        </Box>
+      </Box>
     );
   };
   

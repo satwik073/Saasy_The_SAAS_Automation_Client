@@ -7,6 +7,7 @@ import { displaying_buttons } from '@/constants/data_compressed'
 import { CiMenuFries } from 'react-icons/ci'
 import { NAVIGATOR_STYLING_ATTACHED } from './Constant/layout_controlling'
 import { BOX_COMPONENTS_SEPERATED } from '@/constants/variants_data'
+import { defualt_and_defined_routes } from '@/constants/standard_routes'
 
 type Props = {}
 
@@ -28,7 +29,7 @@ const PrimaryNavigation = (props: Props) => {
             <Box component={BOX_COMPONENTS_SEPERATED.components_fetched.section}>
                 <Box component={BOX_COMPONENTS_SEPERATED.components_fetched.aside} className="flex items-center gap-4">
                     <TRANSLATING_NAVIGATION_TEXT.dropdown_changing_theme_component/>
-                    <Link href="/dashboard" className={NAVIGATOR_STYLING_ATTACHED.STYLING_PREPARED.button_radial_effect_causing_race_condition}>
+                    <Link href={`${defualt_and_defined_routes.dashboard_routes}`} className={NAVIGATOR_STYLING_ATTACHED.STYLING_PREPARED.button_radial_effect_causing_race_condition}>
                         <span className={NAVIGATOR_STYLING_ATTACHED.STYLING_PREPARED.span_tag_outlining} /><span className={NAVIGATOR_STYLING_ATTACHED.STYLING_PREPARED.inline_source}>{true ? (<Box component={BOX_COMPONENTS_SEPERATED.components_fetched.button}>{dashboard_displaying_button}</Box>) : (<Box component={BOX_COMPONENTS_SEPERATED.components_fetched.button}>{getting_started_displaying_button}</Box>)}
                         </span>
                     </Link>
