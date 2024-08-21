@@ -1,4 +1,4 @@
-import MenuOptions from '@/animations/Sidebar'
+import MenuOptions from '@/Globals/GlobalSidebarMenu/SideMenuWrapper/Sidebar'
 import InfoBar from '@/Globals/InfoBar/InputController'
 import React from 'react'
 

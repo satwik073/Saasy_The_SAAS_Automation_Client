@@ -8,10 +8,10 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger
-} from "../../ToolTips/TooltipContent"
+} from "../../GlobalToolTips/TooltipContent"
 import { menuOptions } from '@/constants'
 import clsx from 'clsx'
-import { Separator } from '@/Globals/ToolTips/Seperator/SeperatorContainer'
+import { Separator } from '../../GlobalToolTips/Seperator/SeperatorContainer'
 import { Cross, Database, GitBranch, LucideMousePointerClick } from 'lucide-react'
 import DropdownMenuComponent from '@/Globals/GlobalSiteNavigation/Components/DropdownMenu'
 import { TRANSLATING_NAVIGATION_TEXT } from '@/Globals/GlobalSiteNavigation/NavigationWrapping/Constant'

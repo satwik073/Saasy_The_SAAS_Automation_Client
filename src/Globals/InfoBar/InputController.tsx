@@ -2,14 +2,14 @@
 
 import React, { useState } from 'react'
 import { Book, Headphones, Search, Menu } from 'lucide-react'
-import MenuSmallOptions from './Components/SmallScreenBar'
+import MenuSmallOptions from '../GlobalSidebarMenu/SideMenuWrapper/SmallScreenBar'
 
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "../ToolTips/TooltipContent"
+} from "../GlobalToolTips/TooltipContent"
 import { PlaceholdersAndVanishInputDemo } from './Animations/input_placeholder'
 import { useMediaQuery } from '@mui/material'
 import DropdownMenuComponent from '../GlobalSiteNavigation/Components/DropdownMenu'

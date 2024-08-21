@@ -14,21 +14,21 @@ import { TRANSLATING_NAVIGATION_TEXT } from "@/Globals/GlobalSiteNavigation/Navi
 
 
 interface ThemeController {
-   [x: string]: SetStateAction<string>;
-   classes_toggling_light_themes_color:string,
-   classes_toggling_dark_themes_color: string
+  [x: string]: SetStateAction<string>;
+  classes_toggling_light_themes_color: string,
+  classes_toggling_dark_themes_color: string
 }
 const themeProp: ThemeController = {
   classes_toggling_dark_themes_color: TRANSLATING_NAVIGATION_TEXT.spotlight_dark_base,
   classes_toggling_light_themes_color: TRANSLATING_NAVIGATION_TEXT.spotlight_hidden
 }
 export function SpotlightPreview() {
-  
+
   const browse_components_fetched = displaying_buttons['browse_components'];
   const custom_components_fetched = displaying_buttons['custom_components'];
   const [fill_color_after_theme_change, set_color_after_theme_change] = useState(`${TRANSLATING_NAVIGATION_TEXT.web_page_current_dark_theme_color}`);
   useEffect(() => {
-    if ( typeof window !== 'undefined'){
+    if (typeof window !== 'undefined') {
       const theme = localStorage.getItem('theme');
       const is_light_theme = theme === `${TRANSLATING_NAVIGATION_TEXT.drop_down_light_connecting_content}`;
       set_color_after_theme_change(is_light_theme ? themeProp.classes_toggling_light_themes_color : themeProp.classes_toggling_dark_themes_color);
