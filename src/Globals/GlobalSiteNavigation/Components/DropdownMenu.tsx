@@ -18,14 +18,17 @@ type Props = {}
 const DropdownMenuComponent = (props: Props) => {
     const { setTheme } = useTheme();
     const [theme_fetching_state, set_theme_fetching_state] = useState<string | null>(null);
+    
     const save_theme_in_localStorage = (theme: string) => {
         localStorage.setItem('theme', theme);
     };
     useEffect(() => {
-        const stored_theme_instance = localStorage.getItem('theme');
-        if (stored_theme_instance) {
-            setTheme(stored_theme_instance);
-            set_theme_fetching_state(stored_theme_instance);
+        if (typeof window !== 'undefined') {
+            const stored_theme_instance = localStorage.getItem('theme');
+            if (stored_theme_instance) {
+                setTheme(stored_theme_instance);
+                set_theme_fetching_state(stored_theme_instance);
+            }
         }
     }, [setTheme]);
     const handle_theme_change = (new_fetched_theme_spotted: string) => {

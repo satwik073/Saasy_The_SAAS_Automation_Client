@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { AsyncLocalStorage } from 'async_hooks'
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import {
@@ -32,24 +33,19 @@ type Props = {
 }
 const MenuOptions: React.FC<Props> = ({ isDrawerOpen, onCloseDrawer }) => {
   const isSmallScreen = useMediaQuery('(max-width: 600px)');
-  const [fillTransitionColor, setTransitionFillColor] = useState<string>(() => {
-    const theme = localStorage.getItem('theme');
-    return theme === TRANSLATING_NAVIGATION_TEXT.drop_down_light_connecting_content
-      ? ''
-      : TRANSLATING_NAVIGATION_TEXT.web_page_current_dark_theme_color;
-  });
+  const [fillTransitionColor, setTransitionFillColor] = useState<string>('');
 
   useEffect(() => {
-    const theme = localStorage.getItem('theme');
-    setTransitionFillColor(
-      theme === TRANSLATING_NAVIGATION_TEXT.drop_down_light_connecting_content
-        ? ''
-        : TRANSLATING_NAVIGATION_TEXT.web_page_current_dark_theme_color
-    );
+    if (typeof window !== 'undefined') {
+      const theme = localStorage.getItem('theme');
+      setTransitionFillColor(
+        theme === TRANSLATING_NAVIGATION_TEXT.drop_down_light_connecting_content
+          ? ''
+          : TRANSLATING_NAVIGATION_TEXT.web_page_current_dark_theme_color
+      );
+    }
   }, []);
-
-  const pathName = usePathname();
-
+  const pathName = usePathname()
   return (
     <nav
       className={clsx(
@@ -65,7 +61,7 @@ const MenuOptions: React.FC<Props> = ({ isDrawerOpen, onCloseDrawer }) => {
       <div className="flex flex-col items-center gap-8">
         {isSmallScreen && isDrawerOpen && (
           <button onClick={onCloseDrawer} className="self-end text-white">
-            <Cross/>
+            <Cross />
           </button>
         )}
         <Link href="/" className="font-bold block text-center">
@@ -109,9 +105,8 @@ const MenuOptions: React.FC<Props> = ({ isDrawerOpen, onCloseDrawer }) => {
               >
                 <Icon className="text-muted-foreground" size={10} />
                 <div
-                  className={`border-l-2 border-muted-foreground/50 h-6 absolute left-1/2 transform -translate-x-1/2 -bottom-[30px] ${
-                    index % 2 === 0 ? 'block' : 'hidden'
-                  }`}
+                  className={`border-l-2 border-muted-foreground/50 h-6 absolute left-1/2 transform -translate-x-1/2 -bottom-[30px] ${index % 2 === 0 ? 'block' : 'hidden'
+                    }`}
                 />
               </div>
             )
@@ -126,3 +121,7 @@ const MenuOptions: React.FC<Props> = ({ isDrawerOpen, onCloseDrawer }) => {
 };
 
 export default MenuOptions;
+
+function setTransitionFillColor(arg0: string) {
+  throw new Error('Function not implemented.')
+}

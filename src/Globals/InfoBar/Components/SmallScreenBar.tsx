@@ -33,21 +33,18 @@ type Props = {
 }
 const MenuSmallOptions: React.FC<Props> = ({ isDrawerOpen, onCloseDrawer }) => {
     const isSmallScreen = useMediaQuery('(max-width: 600px)');
-    const [fillTransitionColor, setTransitionFillColor] = useState<string>(() => {
-      const theme = localStorage.getItem('theme');
-      return theme === TRANSLATING_NAVIGATION_TEXT.drop_down_light_connecting_content
-        ? ''
-        : TRANSLATING_NAVIGATION_TEXT.web_page_current_dark_theme_color;
-    });
-  
-    useEffect(() => {
+    const [fillTransitionColor, setTransitionFillColor] = useState<string>('');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
       const theme = localStorage.getItem('theme');
       setTransitionFillColor(
         theme === TRANSLATING_NAVIGATION_TEXT.drop_down_light_connecting_content
           ? ''
           : TRANSLATING_NAVIGATION_TEXT.web_page_current_dark_theme_color
       );
-    }, []);
+    }
+  }, []);
   
     const pathName = usePathname();
   

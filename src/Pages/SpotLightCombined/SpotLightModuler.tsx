@@ -28,9 +28,11 @@ export function SpotlightPreview() {
   const custom_components_fetched = displaying_buttons['custom_components'];
   const [fill_color_after_theme_change, set_color_after_theme_change] = useState(`${TRANSLATING_NAVIGATION_TEXT.web_page_current_dark_theme_color}`);
   useEffect(() => {
-    const theme = localStorage.getItem('theme');
-    const is_light_theme = theme === `${TRANSLATING_NAVIGATION_TEXT.drop_down_light_connecting_content}`;
-    set_color_after_theme_change(is_light_theme ? themeProp.classes_toggling_light_themes_color : themeProp.classes_toggling_dark_themes_color);
+    if ( typeof window !== 'undefined'){
+      const theme = localStorage.getItem('theme');
+      const is_light_theme = theme === `${TRANSLATING_NAVIGATION_TEXT.drop_down_light_connecting_content}`;
+      set_color_after_theme_change(is_light_theme ? themeProp.classes_toggling_light_themes_color : themeProp.classes_toggling_dark_themes_color);
+    }
   }, []);
   return (
     <Box component={BOX_COMPONENTS_SEPERATED.components_fetched.header} className={SPOTLIGHT_CUSTOM_STYLINGS_ATTACHED.splot_light_main}>

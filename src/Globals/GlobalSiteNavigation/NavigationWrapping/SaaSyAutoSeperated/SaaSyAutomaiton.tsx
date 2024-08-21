@@ -20,8 +20,10 @@ const SaaSyAutomation: React.FC<Props> = () => {
     const [fillTransitionColor, setTransitionFillColor] = useState<string>(TRANSLATING_NAVIGATION_TEXT.web_page_current_dark_theme_color);
 
     useEffect(() => {
+        if (typeof window !== 'undefined') {
         const theme = localStorage.getItem('theme');
         setTransitionFillColor(theme === TRANSLATING_NAVIGATION_TEXT.drop_down_light_connecting_content ? '' : TRANSLATING_NAVIGATION_TEXT.web_page_current_dark_theme_color);
+        }
     }, []);
 
     const imageContainerProps: ImageContainerAttributes = {
