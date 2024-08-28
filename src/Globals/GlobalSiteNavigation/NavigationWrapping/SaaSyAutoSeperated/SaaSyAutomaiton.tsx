@@ -4,7 +4,7 @@ import ImageContainer from '@/components/Images/ImageContainer';
 import { Box, Typography } from '@mui/material';
 import { TRANSLATING_NAVIGATION_TEXT } from '../Constant';
 import { NAVIGATOR_STYLING_ATTACHED } from '../Constant/layout_controlling';
-import { BOX_COMPONENTS_SEPERATED, TYPOGRAPHY_VARIANTS_SEPERATED } from '@/constants/variants_data';
+import { BOX_COMPONENTS_SEPERATED, TYPOGRAPHY_VARIANTS_SEPERATED } from '@/Constants/variants_data';
 
 type Props = {};
 

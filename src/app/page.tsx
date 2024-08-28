@@ -2,7 +2,7 @@ import { clients } from "@/lib/constants";
 import { MAIN_COMPONENT_STORAGE } from ".";
 import React from "react";
 import { Box } from "@mui/material";
-import { BOX_COMPONENTS_SEPERATED } from "@/constants/variants_data";
+import { BOX_COMPONENTS_SEPERATED } from "@/Constants/variants_data";
 
 interface InfiniteMovingCardsProps {
   items: { href: string; }[]; 

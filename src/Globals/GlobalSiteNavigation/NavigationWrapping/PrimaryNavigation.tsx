@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react'
 import { TRANSLATING_NAVIGATION_TEXT } from './Constant'
 import { Box, List, ListItem } from '@mui/material'
 import Link from 'next/link'
-import { displaying_buttons } from '@/constants/data_compressed'
+import { displaying_buttons } from '@/Constants/data_compressed'
 import { CiMenuFries } from 'react-icons/ci'
 import { NAVIGATOR_STYLING_ATTACHED } from './Constant/layout_controlling'
-import { BOX_COMPONENTS_SEPERATED } from '@/constants/variants_data'
-import { defualt_and_defined_routes } from '@/constants/standard_routes'
+import { BOX_COMPONENTS_SEPERATED } from '@/Constants/variants_data'
+import { defualt_and_defined_routes } from '@/Constants/standard_routes'
 
 type Props = {}
 
@@ -22,7 +22,7 @@ const PrimaryNavigation = (props: Props) => {
             <Box component={BOX_COMPONENTS_SEPERATED.components_fetched.nav} className={NAVIGATOR_STYLING_ATTACHED.STYLING_PREPARED.absolute_structure}>
                 <List className={NAVIGATOR_STYLING_ATTACHED.STYLING_PREPARED.list_and_listitems}>
                     {TRANSLATING_NAVIGATION_TEXT.navigation_links_handler.map((index_reduction_value) => (
-                        <ListItem key={index_reduction_value.targeted_id} className='links-fetched'><Link href={index_reduction_value.specified_path}>{index_reduction_value.route_link_name}</Link></ListItem>
+                        <ListItem key={index_reduction_value.targeted_id} className='links-fetched capitalize'><Link href={index_reduction_value.specified_path}>{index_reduction_value.route_link_name}</Link></ListItem>
                     ))}
                 </List>
             </Box>

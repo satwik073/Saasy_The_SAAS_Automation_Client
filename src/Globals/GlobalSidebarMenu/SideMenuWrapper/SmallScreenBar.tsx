@@ -2,16 +2,16 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
-import { menuOptions } from '@/constants'
+import { menuOptions } from '@/Constants'
 import clsx from 'clsx'
 import DropdownMenuComponent from '@/Globals/GlobalSiteNavigation/Components/DropdownMenu'
 import { TRANSLATING_NAVIGATION_TEXT } from '@/Globals/GlobalSiteNavigation/NavigationWrapping/Constant'
 import { Box, Button, List, ListItem, Typography, useMediaQuery } from '@mui/material'
 import { MENU_OPTIONS_CREATED } from '../Constants/layout_controlling'
-import { BOX_COMPONENTS_SEPERATED, TYPOGRAPHY_VARIANTS_SEPERATED } from '@/constants/variants_data'
+import { BOX_COMPONENTS_SEPERATED, TYPOGRAPHY_VARIANTS_SEPERATED } from '@/Constants/variants_data'
 import { MENU_OPTIONS_SCREEN_CONTENT } from '../Constants'
-import { extended_classes } from '@/constants/use_common_styling'
-import { defualt_and_defined_routes } from '@/constants/standard_routes'
+import { extended_classes } from '@/Constants/use_common_styling'
+import { defualt_and_defined_routes } from '@/Constants/standard_routes'
 import { INFINITE_MOVING_CARDS_ATTRIBUTES } from '@/Pages/InfiniteScrollers/Constants'
 
 interface ContainerAttributes {
@@ -23,8 +23,8 @@ interface ContainerExtended extends ContainerAttributes {
   className?: string;
   is_drawer_open?: boolean;
   is_drawer_open_success?: boolean;
-  }
-const MenuSmallOptions: React.FC<ContainerExtended> = ({ is_drawer_open_success, on_close_drawer , className, children }) => {
+}
+const MenuSmallOptions: React.FC<ContainerExtended> = ({ is_drawer_open_success, on_close_drawer, className, children }) => {
   const is_small_screen_area = useMediaQuery(`${extended_classes.media_queries.mobile_devices_below_600px}`);
   const [fill_transition_color, set_transition_fill_color] = useState<string>(`${MENU_OPTIONS_SCREEN_CONTENT.CONTENT.empty_state}`);
   useEffect(() => {
@@ -71,26 +71,20 @@ const MenuSmallOptions: React.FC<ContainerExtended> = ({ is_drawer_open_success,
                         [extended_classes.primary_textures]: path_name_specified === menu_items_controller.href_routes_enabled,
                       })}
                     >
-                      <Box className="text-sm">
+                      <Box className="text-md flex">
                         <menu_items_controller.Component size={22} fontWeight={'bold'} />
+                        <Typography variant={TYPOGRAPHY_VARIANTS_SEPERATED.body_variant.body1}>{menu_items_controller.naming_determined}</Typography>
                       </Box>
                     </Link>
                   </ListItem>
                 </MENU_OPTIONS_SCREEN_CONTENT.CONTENT.tool_tip_trigger>
-                <MENU_OPTIONS_SCREEN_CONTENT.CONTENT.tool_tip_content
-                  side={`${INFINITE_MOVING_CARDS_ATTRIBUTES.direction_defined_forth}`}
-                  className="bg-black/10 backdrop-blur-xl"
-                >
-                  <Typography variant={TYPOGRAPHY_VARIANTS_SEPERATED.body_variant.body1}>{menu_items_controller.naming_determined}</Typography>
-                </MENU_OPTIONS_SCREEN_CONTENT.CONTENT.tool_tip_content>
               </MENU_OPTIONS_SCREEN_CONTENT.CONTENT.tool_tip_wrapper>
             ))}
           </List>
         </MENU_OPTIONS_SCREEN_CONTENT.CONTENT.tool_tip_provider>
-        </Box>
       </Box>
-    );
-  };
-  
-  export default MenuSmallOptions;
-  
+    </Box>
+  );
+};
+
+export default MenuSmallOptions;

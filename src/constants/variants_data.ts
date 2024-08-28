@@ -1,6 +1,6 @@
 
 
-import { TypographyVariants , BoxVariants } from "./typography_and_box_variant";
+import { TypographyVariants , BoxVariants } from "../Constants/typography_and_box_variant";
 
 export const TYPOGRAPHY_VARIANTS_SEPERATED: TypographyVariants = {
   headings_variant: {

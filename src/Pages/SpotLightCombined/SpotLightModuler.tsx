@@ -5,11 +5,11 @@ import { cn } from "@/lib/utils";
 import { Spotlight } from "./Components/ui/spot_light";
 import { FlipWordsDemo } from "./Animations/flickering_words";
 import { Button } from "@/components/ui/button";
-import { displaying_buttons } from "@/constants/data_compressed";
+import { displaying_buttons } from "@/Constants/data_compressed";
 import { SPOT_LIGHT_PREVIEW_CONTENT_RAISED } from "./Constant";
 import { SPOTLIGHT_CUSTOM_STYLINGS_ATTACHED } from "./Constant/layout_controlling";
 import { Box, Grid, Typography } from "@mui/material";
-import { BOX_COMPONENTS_SEPERATED, TYPOGRAPHY_VARIANTS_SEPERATED } from "@/constants/variants_data";
+import { BOX_COMPONENTS_SEPERATED, TYPOGRAPHY_VARIANTS_SEPERATED } from "@/Constants/variants_data";
 import { TRANSLATING_NAVIGATION_TEXT } from "@/Globals/GlobalSiteNavigation/NavigationWrapping/Constant";
 
 

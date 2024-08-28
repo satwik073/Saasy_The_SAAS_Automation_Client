@@ -7,4 +7,10 @@ export const defualt_and_defined_routes = {
     billing_route : '/billings',
     templates_route:'/templates',
     previous_logs :'/logs',
+    products_route : "/products",
+    pricing_route : "/pricing",
+    clients_route : "/clients",
+    resources_route : "/resources",
+    documentation_route : "/documentation",
+    enterprise_route : "/enterprise",
 }

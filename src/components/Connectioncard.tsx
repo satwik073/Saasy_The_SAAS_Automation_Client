@@ -1,4 +1,4 @@
-import { ConnectionTypes } from '@/constants/types'
+import { ConnectionTypes } from '@/Constants/types'
 import React from 'react'
 import {
   Card,

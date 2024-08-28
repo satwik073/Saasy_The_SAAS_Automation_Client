@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { Label } from '@/components/ui/label'
-import { EditUserProfileSchema } from '@/constants/types'
+import { EditUserProfileSchema } from '@/Constants/types'
 import {
     Form,
     FormControl,

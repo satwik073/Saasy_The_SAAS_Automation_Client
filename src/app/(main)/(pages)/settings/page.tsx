@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { EditUserProfileSchema } from '@/constants/types';
+import { EditUserProfileSchema } from '@/Constants/types';
 type Props = {};
 const Settings = (props: Props) => {
   const [isProfileFormLoading, setProfileFormLoading] = useState<boolean>(false);

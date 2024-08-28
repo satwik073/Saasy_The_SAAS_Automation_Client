@@ -6,8 +6,8 @@ import MenuSmallOptions from '../GlobalSidebarMenu/SideMenuWrapper/SmallScreenBa
 import { PlaceholdersAndVanishInputDemo } from './Animations/input_placeholder'
 import { Box, Typography, useMediaQuery } from '@mui/material'
 import { MENU_OPTIONS_SCREEN_CONTENT } from '../GlobalSidebarMenu/Constants'
-import { BOX_COMPONENTS_SEPERATED, TYPOGRAPHY_VARIANTS_SEPERATED } from '@/constants/variants_data'
-import { extended_classes } from '@/constants/use_common_styling'
+import { BOX_COMPONENTS_SEPERATED, TYPOGRAPHY_VARIANTS_SEPERATED } from '@/Constants/variants_data'
+import { extended_classes } from '@/Constants/use_common_styling'
 
 
 type Props = {}
@@ -60,7 +60,7 @@ const InfoBar = (props: Props) => {
       </MENU_OPTIONS_SCREEN_CONTENT.CONTENT.tool_tip_provider>
       {is_drawer_open && (
         <Box className="fixed inset-0 z-50 flex">
-          <MenuSmallOptions is_drawer_open={is_drawer_open} on_close_drawer={toggle_menu_drawer} />
+          <MenuSmallOptions is_drawer_open_success={is_drawer_open} on_close_drawer={toggle_menu_drawer} />
         </Box>
       )}
     </Box>

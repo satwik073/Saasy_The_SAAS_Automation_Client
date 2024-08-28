@@ -6,7 +6,7 @@ import { Divider, Grid, List, ListItem, Typography } from '@mui/material';
 import Link from 'next/link';
 import { FOOTER_SYLING_ATTACHED } from '../Constant/layouts_controlling';
 import SaaSyAutomaiton from '@/Globals/GlobalSiteNavigation/NavigationWrapping/SaaSyAutoSeperated/SaaSyAutomaiton';
-import { BOX_COMPONENTS_SEPERATED, TYPOGRAPHY_VARIANTS_SEPERATED } from '@/constants/variants_data';
+import { BOX_COMPONENTS_SEPERATED, TYPOGRAPHY_VARIANTS_SEPERATED } from '@/Constants/variants_data';
 const PrimarySiteFooter = () => {
     return (
         <Box component={BOX_COMPONENTS_SEPERATED.components_fetched.header} className=" w-full bg-gray-50 dark:bg-black">

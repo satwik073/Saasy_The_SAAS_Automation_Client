@@ -5,14 +5,20 @@ import { CiMoneyCheck1 } from "react-icons/ci";
 import { FaBlog, FaConnectdevelop, FaHouseDamage, FaListAlt, FaMoneyBill, FaMoneyBillWaveAlt, FaSteam } from "react-icons/fa"
 import { IoSettingsOutline } from "react-icons/io5";
 import { PiSoundcloudLogoLight, PiStackOverflowLogoThin } from "react-icons/pi";
+import { FC } from 'react';
 import { GrTemplate } from "react-icons/gr";
-import { defualt_and_defined_routes } from "./standard_routes";
+import { defualt_and_defined_routes } from "../Constants/standard_routes"
 interface NavitemDestructured {
   id: number,
   route_link_naming_determined: string,
   specified_path: string
 }
-export const menuOptions = [
+interface MenuOptionProps {
+  naming_determined : string,
+  Component : FC<any>,
+  href_routes_enabled : string
+}
+export const menuOptions : MenuOptionProps[] =  [
   { naming_determined: 'Dashboard', Component: Home, href_routes_enabled: `${defualt_and_defined_routes.dashboard_routes}` },
   { naming_determined: 'Workflows', Component: PiStackOverflowLogoThin, href_routes_enabled: `${defualt_and_defined_routes.workflows_route}` },
   { naming_determined: 'Settings', Component: IoSettingsOutline, href_routes_enabled: `${defualt_and_defined_routes.settings_route}` },
@@ -25,33 +31,33 @@ export const menuOptions = [
 export const Navhandler: NavitemDestructured[] = [
   {
     "id": 1,
-    route_link_naming_determined: "Products",
-    specified_path: "/products"
+    route_link_naming_determined: defualt_and_defined_routes.products_route.substring(1),
+    specified_path: defualt_and_defined_routes.products_route
   },
   {
     "id": 2,
-    route_link_naming_determined: "Pricing",
-    specified_path: "/pricing"
+    route_link_naming_determined: defualt_and_defined_routes.pricing_route.substring(1),
+    specified_path: defualt_and_defined_routes.pricing_route
   },
   {
     "id": 3,
-    route_link_naming_determined: "Clients",
-    specified_path: "/clients"
+    route_link_naming_determined: defualt_and_defined_routes.clients_route.substring(1),
+    specified_path: defualt_and_defined_routes.clients_route
   },
   {
     "id": 4,
-    route_link_naming_determined: "Resources",
-    specified_path: "/resources"
+    route_link_naming_determined: defualt_and_defined_routes.resources_route.substring(1),
+    specified_path: defualt_and_defined_routes.resources_route
   },
   {
     "id": 5,
-    route_link_naming_determined: "Documentation",
-    specified_path: "/documenttation"
+    route_link_naming_determined: defualt_and_defined_routes.documentation_route.substring(1),
+    specified_path: defualt_and_defined_routes.documentation_route
   },
   {
     "id": 6,
-    route_link_naming_determined: "Enterprise",
-    specified_path: "/enterprise"
+    route_link_naming_determined: defualt_and_defined_routes.enterprise_route.substring(1),
+    specified_path: defualt_and_defined_routes.enterprise_route
   },
 ]
 

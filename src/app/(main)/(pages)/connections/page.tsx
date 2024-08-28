@@ -1,4 +1,4 @@
-import { CONNECTIONS } from '@/constants'
+import { CONNECTIONS } from '@/Constants'
 import React from 'react'
 import ConnectionCard from '@/components/Connectioncard'
 
