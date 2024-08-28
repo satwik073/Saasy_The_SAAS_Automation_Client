@@ -8,11 +8,12 @@ import DropdownMenuComponent from '@/Globals/GlobalSiteNavigation/Components/Dro
 import { TRANSLATING_NAVIGATION_TEXT } from '@/Globals/GlobalSiteNavigation/NavigationWrapping/Constant'
 import { Box, Button, List, ListItem, Typography, useMediaQuery } from '@mui/material'
 import { MENU_OPTIONS_CREATED } from '../Constants/layout_controlling'
-import { BOX_COMPONENTS_SEPERATED, TYPOGRAPHY_VARIANTS_SEPERATED } from '@/Constants/variants_data'
+
 import { MENU_OPTIONS_SCREEN_CONTENT } from '../Constants'
-import { extended_classes } from '@/Constants/use_common_styling'
-import { defualt_and_defined_routes } from '@/Constants/standard_routes'
+import { extended_classes } from '../../../Constants/use_common_styling'
+import { defualt_and_defined_routes } from '../../../Constants/standard_routes'
 import { INFINITE_MOVING_CARDS_ATTRIBUTES } from '@/Pages/InfiniteScrollers/Constants'
+import { BOX_COMPONENTS_SEPERATED, TYPOGRAPHY_VARIANTS_SEPERATED } from '../../../Constants/variants_data'
 
 interface ContainerAttributes {
   is_drawer_open_success?: boolean;
