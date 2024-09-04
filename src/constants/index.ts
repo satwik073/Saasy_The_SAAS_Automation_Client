@@ -6,6 +6,7 @@ import { FaBlog, FaConnectdevelop, FaHouseDamage, FaListAlt, FaMoneyBill, FaMone
 import { IoSettingsOutline } from "react-icons/io5";
 import { PiSoundcloudLogoLight, PiStackOverflowLogoThin } from "react-icons/pi";
 import { FC } from 'react';
+import { z } from 'zod'
 import { GrTemplate } from "react-icons/gr";
 import { defualt_and_defined_routes } from "../Constants/standard_routes"
 interface NavitemDestructured {
@@ -27,6 +28,10 @@ export const menuOptions : MenuOptionProps[] =  [
   { naming_determined: 'Templates', Component: GrTemplate, href_routes_enabled: `${defualt_and_defined_routes.templates_route}` },
   { naming_determined: 'Logs', Component: PiSoundcloudLogoLight, href_routes_enabled: `${defualt_and_defined_routes.previous_logs}` },
 ]
+export const WorkflowFormSchema = z.object({
+  name: z.string().min(1, 'Required'),
+  description: z.string().min(1, 'Required'),
+})
 
 export const Navhandler: NavitemDestructured[] = [
   {
