@@ -1,6 +1,6 @@
 'use client';
 
-import ProfileForm from '@/Forms/ProfileForm';
+import ProfileForm from '@/Forms/ProfileFormContainer';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';

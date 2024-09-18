@@ -1,10 +1,10 @@
 
 import PrimaryNavigation from "@/Globals/GlobalSiteNavigation/NavigationWrapping/PrimaryNavigation";
 import { SpotlightPreview } from "@/Pages/SpotLightCombined/SpotLightModuler";
-import { InfiniteMovingCards } from "@/animations/infinite-moving-cards";
+import { InfiniteMovingCards } from "@/Animations/MovingCardsGlobalState";
 import { FeaturesSectionDemo } from "@/Pages/GridContainer/GridConstants";
 import { FeaturedSectionDemo } from "@/Pages/GridContainer/GridTerminalLayout";
-import CardContainers from "@/Pages/CardWrapper/CardContainers";
+import CardContainers from "@/Pages/CardWrapper/CardFlexContainers";
 import PeopleEngaged from "@/Pages/Testimonials/PeopleEngaged";
 import PrimarySiteFooter from "../Globals/GlobalSiteFooter/FooterAttributesWrapping/Components/PrimarySiteFooter";
 

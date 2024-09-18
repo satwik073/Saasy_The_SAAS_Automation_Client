@@ -2,7 +2,7 @@
 'use client'
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/Components/Images/External/UI/button'
 import { useTheme } from "next-themes"
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons"
 import {
@@ -10,7 +10,7 @@ import {
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/Components/Images/External/UI/dropdown-menu"
 import { TRANSLATING_NAVIGATION_TEXT } from '../NavigationWrapping/Constant'
 
 type Props = {}

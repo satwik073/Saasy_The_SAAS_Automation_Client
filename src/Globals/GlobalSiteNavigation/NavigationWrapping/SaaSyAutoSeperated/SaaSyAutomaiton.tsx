@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import ImageContainer from '@/components/Images/ImageContainer';
+import ImageContainer from '@/Components/Images/ImageContainer';
 import { Box, Typography } from '@mui/material';
 import { TRANSLATING_NAVIGATION_TEXT } from '../Constant';
 import { NAVIGATOR_STYLING_ATTACHED } from '../Constant/layout_controlling';

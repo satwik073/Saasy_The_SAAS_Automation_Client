@@ -1,5 +1,5 @@
 import React from "react";
-import { FlipWords } from "../Components/ui/flipping_words";
+import { FlipWords } from "../Components/ui/AutoLayoutWord";
 import { clients, products } from "@/lib/constants";
 
 

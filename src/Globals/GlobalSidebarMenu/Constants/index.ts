@@ -1,5 +1,5 @@
 import DropdownMenuComponent from "@/Globals/GlobalSiteNavigation/Components/DropdownMenu";
-import { Separator } from "@/Globals/GlobalToolTips/Seperator/SeperatorContainer";
+import { Separator } from "@/Globals/GlobalToolTips/SeperatorContent/SeperatorContainer";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/Globals/GlobalToolTips/TooltipContent";
 import { Cross, Database, GitBranch, Icon, LucideMousePointerClick } from "lucide-react";
 import { FaBolt } from "react-icons/fa";

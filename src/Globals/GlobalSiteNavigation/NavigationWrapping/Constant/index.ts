@@ -1,4 +1,4 @@
-import ImageContainer from "@/components/Images/ImageContainer";
+import ImageContainer from "@/Components/Images/ImageContainer";
 import DropdownMenuComponent from "../../Components/DropdownMenu";
 import SaaSyAutomaiton from "../SaaSyAutoSeperated/SaaSyAutomaiton";
 import { AiFillThunderbolt } from "react-icons/ai";

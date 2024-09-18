@@ -6,7 +6,7 @@ import createGlobe from "cobe";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { InfiniteMovingCards } from "@/animations/infinite-moving-cards";
+import { InfiniteMovingCards } from "@/Animations/MovingCardsGlobalState";
 import { clients } from "@/lib/constants";
 export function FeaturesSectionDemo() {
   const features = [

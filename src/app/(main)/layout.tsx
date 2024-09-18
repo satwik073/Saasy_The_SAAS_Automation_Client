@@ -1,5 +1,5 @@
-import MenuOptions from '@/Globals/GlobalSidebarMenu/SideMenuWrapper/Sidebar'
-import InfoBar from '@/Globals/InfoBar/InputController'
+import MenuOptions from '@/Globals/GlobalSidebarMenu/SideMenuWrapper/SidebarActionController'
+import InfoBar from '@/Globals/InfoHandllingBar/InputController'
 import React from 'react'
 
 type Props = {children: React.ReactNode}

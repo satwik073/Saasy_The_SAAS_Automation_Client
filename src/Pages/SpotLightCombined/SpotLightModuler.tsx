@@ -2,9 +2,9 @@
 import React, { SetStateAction } from "react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import { Spotlight } from "./Components/ui/spot_light";
-import { FlipWordsDemo } from "./Animations/flickering_words";
-import { Button } from "@/components/ui/button";
+import { Spotlight } from "./Components/ui/SpotLightReducer";
+import { FlipWordsDemo } from "./Animations/FlickeringWordsAttached";
+import { Button } from "@/Components/Images/External/UI/button";
 import { displaying_buttons } from "@/Constants/data_compressed";
 import { SPOT_LIGHT_PREVIEW_CONTENT_RAISED } from "./Constant";
 import { SPOTLIGHT_CUSTOM_STYLINGS_ATTACHED } from "./Constant/layout_controlling";

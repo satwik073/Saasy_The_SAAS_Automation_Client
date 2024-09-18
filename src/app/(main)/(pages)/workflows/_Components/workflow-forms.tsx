@@ -11,7 +11,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card'
+} from '@/Components/Images/External/UI/card'
 import {
   Form,
   FormControl,
@@ -19,13 +19,13 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
+} from '@/Components/Images/External/UI/form'
+import { Input } from '@/Components/Images/External/UI/input'
+import { Button } from '@/Components/Images/External/UI/button'
 import { Loader2 } from 'lucide-react'
 
 // import { onCreateWorkflow } from '@/app/(main)/(pages)/workflows/_actions/workflow-connections'
-import { useModal } from '@/providers/modal_provider'
+import { useModal } from '@/providers/ModalValueProvider'
 
 type Props = {
   title?: string
