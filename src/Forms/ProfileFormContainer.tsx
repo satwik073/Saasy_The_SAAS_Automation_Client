@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
-import { Label } from '@/components/ui/label'
+import { Label } from '@/Components/Images/External/UI/label'
 import { EditUserProfileSchema } from '@/Constants/types'
 import {
     Form,
@@ -13,9 +13,9 @@ import {
     FormItem,
     FormLabel,
     FormMessage,
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
+} from '@/Components/Images/External/UI/form'
+import { Input } from '@/Components/Images/External/UI/input'
+import { Button } from '@/Components/Images/External/UI/button'
 import { Loader2 } from 'lucide-react'
 
 const ProfileForm = () => {

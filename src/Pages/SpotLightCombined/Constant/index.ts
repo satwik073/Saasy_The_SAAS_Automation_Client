@@ -1,5 +1,5 @@
-import { FlipWordsDemo } from "../Animations/flickering_words";
-import { Spotlight } from "../Components/ui/spot_light";
+import { FlipWordsDemo } from "../Animations/FlickeringWordsAttached";
+import { Spotlight } from "../Components/ui/SpotLightReducer";
 
 
 interface SpotlightContent {

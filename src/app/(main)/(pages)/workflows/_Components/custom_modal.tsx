@@ -7,11 +7,11 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from '@/components/ui/drawer'
-import { useModal } from '@/providers/modal_provider'
+} from '@/Components/Images/External/UI/drawer'
+import { useModal } from '@/providers/ModalValueProvider'
 
 import React from 'react'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/Components/Images/External/UI/button'
 
 type Props = {
   title: string

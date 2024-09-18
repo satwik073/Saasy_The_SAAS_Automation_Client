@@ -5,7 +5,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card'
+} from '@/Components/Images/External/UI/card'
 import Image from 'next/image'
 import Link from 'next/link'
 

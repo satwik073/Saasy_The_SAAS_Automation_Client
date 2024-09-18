@@ -1,5 +1,5 @@
 import React from 'react'
-import { InfiniteMovingCards } from '@/animations/infinite-moving-cards'
+import { InfiniteMovingCards } from '@/Animations/MovingCardsGlobalState'
 import { clients } from '@/lib/constants'
 type Props = {}
 

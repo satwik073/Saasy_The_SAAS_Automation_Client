@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardBody, CardContainer, CardItem } from '@/animations/3d-card'
+import { CardBody, CardContainer, CardItem } from '@/Animations/3DGlobalCard'
 import { FaCheck } from 'react-icons/fa'
 
 type Props = {}

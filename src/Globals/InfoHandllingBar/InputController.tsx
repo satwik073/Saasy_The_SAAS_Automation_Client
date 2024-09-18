@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react'
 import { Book, Headphones, Search, Menu } from 'lucide-react'
-import MenuSmallOptions from '../GlobalSidebarMenu/SideMenuWrapper/SmallScreenBar'
-import { PlaceholdersAndVanishInputDemo } from './Animations/input_placeholder'
+import MenuSmallOptions from '../GlobalSidebarMenu/SideMenuWrapper/AdjustedSidebar'
+import { PlaceholdersAndVanishInputDemo } from './Animations/InputPlaceholder'
 import { Box, Typography, useMediaQuery } from '@mui/material'
 import { MENU_OPTIONS_SCREEN_CONTENT } from '../GlobalSidebarMenu/Constants'
 import { BOX_COMPONENTS_SEPERATED, TYPOGRAPHY_VARIANTS_SEPERATED } from '@/Constants/variants_data'
