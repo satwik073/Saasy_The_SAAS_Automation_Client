@@ -16,7 +16,7 @@ const nextConfig = {
 
   webpack: (config) => {
     // Alias to resolve paths starting with @/
-    config.resolve.alias['@'] = path.resolve(__dirname, './src');
+    config.resolve.alias['@'] = path.resolve(__dirname, 'src');
 
     // Return the modified config
     return config;
