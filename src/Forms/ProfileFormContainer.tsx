@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
-import { Label } from '@/Components/Images/External/UI/label'
+import { Label } from '../Components/Images/External/UI/label'
 import { EditUserProfileSchema } from '@/Constants/types'
 import {
     Form,
